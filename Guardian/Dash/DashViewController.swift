@@ -19,7 +19,20 @@ class DashViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationItem.title = "Guardian"
         
-        // Do any additional setup after loading the view.
+        if let user = GIDSignIn.sharedInstance().currentUser {
+                print("Current google user is: \(user.profile.name)")
+        }
+        else {
+            print("uh oh. no user currently signed in through google at the dash")
+        }
+        
+        if let user = UserStore.instance.getCurrentUser() {
+            print("Current local user is: \(user.name)")
+        }
+        else {
+            print("uh oh. no user currently signed in locally at the dash")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

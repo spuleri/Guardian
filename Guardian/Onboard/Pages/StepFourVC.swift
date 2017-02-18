@@ -8,12 +8,14 @@
 
 import UIKit
 
-class StepFourVC: UIViewController {
+class StepFourVC: UIViewController, GIDSignInUIDelegate {
 
+    @IBOutlet weak var googleSignInButton: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance().uiDelegate = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +24,8 @@ class StepFourVC: UIViewController {
     }
     
 
+    @IBAction func googleSignInButtonPressed(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

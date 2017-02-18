@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112279E550E12BF5D34C4296 /* Pods_GuardianTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C80B61686A58BACE215A70 /* Pods_GuardianTests.framework */; };
+		7A051594E3AF0C07B87DF8B8 /* Pods_Guardian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB2832488284D5B30F3A7DE /* Pods_Guardian.framework */; };
 		E10310EB1E5818F100E50751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10310EA1E5818F100E50751 /* AppDelegate.swift */; };
 		E10310F21E5818F100E50751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10310F11E5818F100E50751 /* Assets.xcassets */; };
 		E10310F51E5818F100E50751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10310F31E5818F100E50751 /* LaunchScreen.storyboard */; };
@@ -29,6 +31,10 @@
 		E103112C1E581FF300E50751 /* DashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E103112A1E581FF300E50751 /* DashViewController.xib */; };
 		E10311301E58268400E50751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E103112E1E58268400E50751 /* Main.storyboard */; };
 		E10311331E58329A00E50751 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311321E58329A00E50751 /* NetworkManager.swift */; };
+		E10311351E58416300E50751 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E10311341E58416300E50751 /* GoogleService-Info.plist */; };
+		E103113C1E5894DC00E50751 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103113B1E5894DC00E50751 /* LocationManager.swift */; };
+		E103113F1E589AF800E50751 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103113E1E589AF800E50751 /* User.swift */; };
+		E1B1DAEA1E58AA63002BEF80 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAE91E58AA63002BEF80 /* UserStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01DD44F7C35A09E023EF661B /* Pods-GuardianTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GuardianTests/Pods-GuardianTests.release.xcconfig"; sourceTree = "<group>"; };
+		04A8341DA78DB50A58B8438E /* Pods-Guardian.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guardian.release.xcconfig"; path = "Pods/Target Support Files/Pods-Guardian/Pods-Guardian.release.xcconfig"; sourceTree = "<group>"; };
+		2BB2832488284D5B30F3A7DE /* Pods_Guardian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guardian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E991CFA28F7F3CD6268F1D9 /* Pods-Guardian.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guardian.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Guardian/Pods-Guardian.debug.xcconfig"; sourceTree = "<group>"; };
+		A2C80B61686A58BACE215A70 /* Pods_GuardianTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuardianTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D003B319B0898AA3BBA0A313 /* Pods-GuardianTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuardianTests/Pods-GuardianTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E10310E71E5818F100E50751 /* Guardian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10310EA1E5818F100E50751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E10310F11E5818F100E50751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +80,11 @@
 		E103112A1E581FF300E50751 /* DashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashViewController.xib; path = Dash/DashViewController.xib; sourceTree = "<group>"; };
 		E103112F1E58268400E50751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E10311321E58329A00E50751 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Network/NetworkManager.swift; sourceTree = "<group>"; };
+		E10311341E58416300E50751 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E10311361E58706B00E50751 /* Guardian-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guardian-Bridging-Header.h"; sourceTree = "<group>"; };
+		E103113B1E5894DC00E50751 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Location/LocationManager.swift; sourceTree = "<group>"; };
+		E103113E1E589AF800E50751 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		E1B1DAE91E58AA63002BEF80 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Models/UserStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A051594E3AF0C07B87DF8B8 /* Pods_Guardian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,18 +100,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112279E550E12BF5D34C4296 /* Pods_GuardianTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36DD0FB91161E1E654BCCDF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E991CFA28F7F3CD6268F1D9 /* Pods-Guardian.debug.xcconfig */,
+				04A8341DA78DB50A58B8438E /* Pods-Guardian.release.xcconfig */,
+				D003B319B0898AA3BBA0A313 /* Pods-GuardianTests.debug.xcconfig */,
+				01DD44F7C35A09E023EF661B /* Pods-GuardianTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9906DC2EAEA982EB4659BDEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2BB2832488284D5B30F3A7DE /* Pods_Guardian.framework */,
+				A2C80B61686A58BACE215A70 /* Pods_GuardianTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E10310DE1E5818F100E50751 = {
 			isa = PBXGroup;
 			children = (
 				E10310E91E5818F100E50751 /* Guardian */,
 				E10310FE1E5818F100E50751 /* GuardianTests */,
 				E10310E81E5818F100E50751 /* Products */,
+				36DD0FB91161E1E654BCCDF0 /* Pods */,
+				9906DC2EAEA982EB4659BDEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +150,9 @@
 		E10310E91E5818F100E50751 /* Guardian */ = {
 			isa = PBXGroup;
 			children = (
+				E103113D1E589AEB00E50751 /* Models */,
+				E103113A1E5894C800E50751 /* Location */,
+				E10311341E58416300E50751 /* GoogleService-Info.plist */,
 				E10311311E58328600E50751 /* Network */,
 				E103112D1E58257500E50751 /* Coordinators */,
 				E10311281E581FDE00E50751 /* Dash */,
@@ -118,6 +162,7 @@
 				E103112E1E58268400E50751 /* Main.storyboard */,
 				E10310F31E5818F100E50751 /* LaunchScreen.storyboard */,
 				E10310F61E5818F100E50751 /* Info.plist */,
+				E10311361E58706B00E50751 /* Guardian-Bridging-Header.h */,
 			);
 			path = Guardian;
 			sourceTree = "<group>";
@@ -184,6 +229,23 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		E103113A1E5894C800E50751 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				E103113B1E5894DC00E50751 /* LocationManager.swift */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		E103113D1E589AEB00E50751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E103113E1E589AF800E50751 /* User.swift */,
+				E1B1DAE91E58AA63002BEF80 /* UserStore.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E10311041E5818F100E50751 /* Build configuration list for PBXNativeTarget "Guardian" */;
 			buildPhases = (
+				4BA216BB597EB51A174D6B91 /* [CP] Check Pods Manifest.lock */,
 				E10310E31E5818F100E50751 /* Sources */,
 				E10310E41E5818F100E50751 /* Frameworks */,
 				E10310E51E5818F100E50751 /* Resources */,
+				412C3B2ADCB47C1ACD5EAC19 /* [CP] Embed Pods Frameworks */,
+				57E6826364D07E5A442D56FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E10311071E5818F100E50751 /* Build configuration list for PBXNativeTarget "GuardianTests" */;
 			buildPhases = (
+				D4861FEC439240EACBECCD53 /* [CP] Check Pods Manifest.lock */,
 				E10310F71E5818F100E50751 /* Sources */,
 				E10310F81E5818F100E50751 /* Frameworks */,
 				E10310F91E5818F100E50751 /* Resources */,
+				ED18E6EF2D60A49C70175087 /* [CP] Embed Pods Frameworks */,
+				5ED66F34694D8CE6F84FDCCB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,6 +302,8 @@
 				TargetAttributes = {
 					E10310E61E5818F100E50751 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 53T6WGJL5K;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					E10310FA1E5818F100E50751 = {
@@ -275,6 +345,7 @@
 				E103112C1E581FF300E50751 /* DashViewController.xib in Resources */,
 				E10311131E58192800E50751 /* StepOneVC.xib in Resources */,
 				E103111B1E581ABB00E50751 /* StepThreeVC.xib in Resources */,
+				E10311351E58416300E50751 /* GoogleService-Info.plist in Resources */,
 				E10311171E581A9C00E50751 /* StepTwoVC.xib in Resources */,
 				E103110F1E58191D00E50751 /* OnboardViewController.xib in Resources */,
 			);
@@ -289,11 +360,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		412C3B2ADCB47C1ACD5EAC19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Guardian/Pods-Guardian-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BA216BB597EB51A174D6B91 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57E6826364D07E5A442D56FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Guardian/Pods-Guardian-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED66F34694D8CE6F84FDCCB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuardianTests/Pods-GuardianTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4861FEC439240EACBECCD53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED18E6EF2D60A49C70175087 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GuardianTests/Pods-GuardianTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E10310E31E5818F100E50751 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E103113F1E589AF800E50751 /* User.swift in Sources */,
 				E10311161E581A9C00E50751 /* StepTwoVC.swift in Sources */,
 				E10311271E581E9800E50751 /* Coordinator.swift in Sources */,
 				E103112B1E581FF300E50751 /* DashViewController.swift in Sources */,
@@ -301,7 +466,9 @@
 				E10311331E58329A00E50751 /* NetworkManager.swift in Sources */,
 				E10311121E58192800E50751 /* StepOneVC.swift in Sources */,
 				E10310EB1E5818F100E50751 /* AppDelegate.swift in Sources */,
+				E1B1DAEA1E58AA63002BEF80 /* UserStore.swift in Sources */,
 				E103110E1E58191D00E50751 /* OnboardViewController.swift in Sources */,
+				E103113C1E5894DC00E50751 /* LocationManager.swift in Sources */,
 				E10311251E581E6E00E50751 /* AppCoordinator.swift in Sources */,
 				E103111E1E581AD200E50751 /* StepFourVC.swift in Sources */,
 				E103111A1E581ABB00E50751 /* StepThreeVC.swift in Sources */,
@@ -439,30 +606,40 @@
 		};
 		E10311051E5818F100E50751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E991CFA28F7F3CD6268F1D9 /* Pods-Guardian.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 53T6WGJL5K;
 				INFOPLIST_FILE = Guardian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.Guardian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Guardian/Guardian-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		E10311061E5818F100E50751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A8341DA78DB50A58B8438E /* Pods-Guardian.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 53T6WGJL5K;
 				INFOPLIST_FILE = Guardian/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.spuleri.Guardian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Guardian/Guardian-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		E10311081E5818F100E50751 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D003B319B0898AA3BBA0A313 /* Pods-GuardianTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,6 +654,7 @@
 		};
 		E10311091E5818F100E50751 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01DD44F7C35A09E023EF661B /* Pods-GuardianTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

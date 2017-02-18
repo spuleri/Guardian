@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepThreeVC" customModule="Guardian" customModuleProvider="target">
             <connections>
+                <outlet property="okButton" destination="P7f-nG-bZO" id="qYT-WZ-aGO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Three" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cje-il-DfC" userLabel="Step Three">
-                    <rect key="frame" x="145" y="323" width="84.5" height="21"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7f-nG-bZO">
+                    <rect key="frame" x="139" y="497" width="96" height="30"/>
+                    <state key="normal" title="Sounds good!">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="okButtonPressed:" destination="-1" eventType="touchUpInside" id="UsM-48-jpm"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardian needs your location data to alert your loved ones when you arrive to an appoint and to ensure your safety." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cje-il-DfC" userLabel="Step Three">
+                    <rect key="frame" x="78" y="169" width="219" height="101.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -28,9 +38,17 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.96934173141790159" blue="0.80760788199217037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cje-il-DfC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Yac-ai-hsa"/>
-                <constraint firstItem="cje-il-DfC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p3g-vr-0eh"/>
+                <constraint firstAttribute="trailing" secondItem="cje-il-DfC" secondAttribute="trailing" constant="78" id="7To-Oj-6GN"/>
+                <constraint firstItem="cje-il-DfC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="169" id="8oI-Mq-3p6"/>
+                <constraint firstItem="P7f-nG-bZO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="j5x-Ea-aD7"/>
+                <constraint firstItem="cje-il-DfC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="78" id="mO3-kI-uYT"/>
+                <constraint firstAttribute="bottom" secondItem="P7f-nG-bZO" secondAttribute="bottom" constant="140" id="nXt-sc-rPR"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
+        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="FFM-U9-6bY">
+            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        </activityIndicatorView>
     </objects>
 </document>
