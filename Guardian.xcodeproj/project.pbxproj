@@ -8,11 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		E10310EB1E5818F100E50751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10310EA1E5818F100E50751 /* AppDelegate.swift */; };
-		E10310ED1E5818F100E50751 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10310EC1E5818F100E50751 /* ViewController.swift */; };
-		E10310F01E5818F100E50751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10310EE1E5818F100E50751 /* Main.storyboard */; };
 		E10310F21E5818F100E50751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10310F11E5818F100E50751 /* Assets.xcassets */; };
 		E10310F51E5818F100E50751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10310F31E5818F100E50751 /* LaunchScreen.storyboard */; };
 		E10311001E5818F100E50751 /* GuardianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10310FF1E5818F100E50751 /* GuardianTests.swift */; };
+		E103110E1E58191D00E50751 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103110C1E58191D00E50751 /* OnboardViewController.swift */; };
+		E103110F1E58191D00E50751 /* OnboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E103110D1E58191D00E50751 /* OnboardViewController.xib */; };
+		E10311121E58192800E50751 /* StepOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311101E58192800E50751 /* StepOneVC.swift */; };
+		E10311131E58192800E50751 /* StepOneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10311111E58192800E50751 /* StepOneVC.xib */; };
+		E10311161E581A9C00E50751 /* StepTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311141E581A9C00E50751 /* StepTwoVC.swift */; };
+		E10311171E581A9C00E50751 /* StepTwoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10311151E581A9C00E50751 /* StepTwoVC.xib */; };
+		E103111A1E581ABB00E50751 /* StepThreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311181E581ABB00E50751 /* StepThreeVC.swift */; };
+		E103111B1E581ABB00E50751 /* StepThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10311191E581ABB00E50751 /* StepThreeVC.xib */; };
+		E103111E1E581AD200E50751 /* StepFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103111C1E581AD200E50751 /* StepFourVC.swift */; };
+		E103111F1E581AD200E50751 /* StepFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E103111D1E581AD200E50751 /* StepFourVC.xib */; };
+		E10311221E581B1C00E50751 /* StepFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311201E581B1C00E50751 /* StepFiveVC.swift */; };
+		E10311231E581B1C00E50751 /* StepFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10311211E581B1C00E50751 /* StepFiveVC.xib */; };
+		E10311251E581E6E00E50751 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311241E581E6E00E50751 /* AppCoordinator.swift */; };
+		E10311271E581E9800E50751 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311261E581E9800E50751 /* Coordinator.swift */; };
+		E103112B1E581FF300E50751 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311291E581FF300E50751 /* DashViewController.swift */; };
+		E103112C1E581FF300E50751 /* DashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E103112A1E581FF300E50751 /* DashViewController.xib */; };
+		E10311301E58268400E50751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E103112E1E58268400E50751 /* Main.storyboard */; };
+		E10311331E58329A00E50751 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311321E58329A00E50751 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +44,30 @@
 /* Begin PBXFileReference section */
 		E10310E71E5818F100E50751 /* Guardian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10310EA1E5818F100E50751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E10310EC1E5818F100E50751 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E10310EF1E5818F100E50751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E10310F11E5818F100E50751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10310F41E5818F100E50751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10310F61E5818F100E50751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10310FB1E5818F100E50751 /* GuardianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10310FF1E5818F100E50751 /* GuardianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardianTests.swift; sourceTree = "<group>"; };
 		E10311011E5818F100E50751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E103110C1E58191D00E50751 /* OnboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnboardViewController.swift; path = Onboard/OnboardViewController.swift; sourceTree = "<group>"; };
+		E103110D1E58191D00E50751 /* OnboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OnboardViewController.xib; path = Onboard/OnboardViewController.xib; sourceTree = "<group>"; };
+		E10311101E58192800E50751 /* StepOneVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepOneVC.swift; path = Onboard/Pages/StepOneVC.swift; sourceTree = "<group>"; };
+		E10311111E58192800E50751 /* StepOneVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepOneVC.xib; path = Onboard/Pages/StepOneVC.xib; sourceTree = "<group>"; };
+		E10311141E581A9C00E50751 /* StepTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepTwoVC.swift; path = Onboard/Pages/StepTwoVC.swift; sourceTree = "<group>"; };
+		E10311151E581A9C00E50751 /* StepTwoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepTwoVC.xib; path = Onboard/Pages/StepTwoVC.xib; sourceTree = "<group>"; };
+		E10311181E581ABB00E50751 /* StepThreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepThreeVC.swift; path = Onboard/Pages/StepThreeVC.swift; sourceTree = "<group>"; };
+		E10311191E581ABB00E50751 /* StepThreeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepThreeVC.xib; path = Onboard/Pages/StepThreeVC.xib; sourceTree = "<group>"; };
+		E103111C1E581AD200E50751 /* StepFourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepFourVC.swift; path = Onboard/Pages/StepFourVC.swift; sourceTree = "<group>"; };
+		E103111D1E581AD200E50751 /* StepFourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepFourVC.xib; path = Onboard/Pages/StepFourVC.xib; sourceTree = "<group>"; };
+		E10311201E581B1C00E50751 /* StepFiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepFiveVC.swift; path = Onboard/Pages/StepFiveVC.swift; sourceTree = "<group>"; };
+		E10311211E581B1C00E50751 /* StepFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepFiveVC.xib; path = Onboard/Pages/StepFiveVC.xib; sourceTree = "<group>"; };
+		E10311241E581E6E00E50751 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = Coordinators/AppCoordinator.swift; sourceTree = "<group>"; };
+		E10311261E581E9800E50751 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Coordinators/Coordinator.swift; sourceTree = "<group>"; };
+		E10311291E581FF300E50751 /* DashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashViewController.swift; path = Dash/DashViewController.swift; sourceTree = "<group>"; };
+		E103112A1E581FF300E50751 /* DashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DashViewController.xib; path = Dash/DashViewController.xib; sourceTree = "<group>"; };
+		E103112F1E58268400E50751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E10311321E58329A00E50751 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = Network/NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +109,13 @@
 		E10310E91E5818F100E50751 /* Guardian */ = {
 			isa = PBXGroup;
 			children = (
+				E10311311E58328600E50751 /* Network */,
+				E103112D1E58257500E50751 /* Coordinators */,
+				E10311281E581FDE00E50751 /* Dash */,
+				E103110A1E5818FF00E50751 /* Onboard */,
 				E10310EA1E5818F100E50751 /* AppDelegate.swift */,
-				E10310EC1E5818F100E50751 /* ViewController.swift */,
-				E10310EE1E5818F100E50751 /* Main.storyboard */,
 				E10310F11E5818F100E50751 /* Assets.xcassets */,
+				E103112E1E58268400E50751 /* Main.storyboard */,
 				E10310F31E5818F100E50751 /* LaunchScreen.storyboard */,
 				E10310F61E5818F100E50751 /* Info.plist */,
 			);
@@ -94,6 +129,59 @@
 				E10311011E5818F100E50751 /* Info.plist */,
 			);
 			path = GuardianTests;
+			sourceTree = "<group>";
+		};
+		E103110A1E5818FF00E50751 /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				E103110C1E58191D00E50751 /* OnboardViewController.swift */,
+				E103110D1E58191D00E50751 /* OnboardViewController.xib */,
+				E103110B1E58190800E50751 /* Pages */,
+			);
+			name = Onboard;
+			sourceTree = "<group>";
+		};
+		E103110B1E58190800E50751 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				E10311101E58192800E50751 /* StepOneVC.swift */,
+				E10311111E58192800E50751 /* StepOneVC.xib */,
+				E10311141E581A9C00E50751 /* StepTwoVC.swift */,
+				E10311151E581A9C00E50751 /* StepTwoVC.xib */,
+				E10311181E581ABB00E50751 /* StepThreeVC.swift */,
+				E10311191E581ABB00E50751 /* StepThreeVC.xib */,
+				E103111C1E581AD200E50751 /* StepFourVC.swift */,
+				E103111D1E581AD200E50751 /* StepFourVC.xib */,
+				E10311201E581B1C00E50751 /* StepFiveVC.swift */,
+				E10311211E581B1C00E50751 /* StepFiveVC.xib */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
+		E10311281E581FDE00E50751 /* Dash */ = {
+			isa = PBXGroup;
+			children = (
+				E10311291E581FF300E50751 /* DashViewController.swift */,
+				E103112A1E581FF300E50751 /* DashViewController.xib */,
+			);
+			name = Dash;
+			sourceTree = "<group>";
+		};
+		E103112D1E58257500E50751 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E10311241E581E6E00E50751 /* AppCoordinator.swift */,
+				E10311261E581E9800E50751 /* Coordinator.swift */,
+			);
+			name = Coordinators;
+			sourceTree = "<group>";
+		};
+		E10311311E58328600E50751 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E10311321E58329A00E50751 /* NetworkManager.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +267,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E103111F1E581AD200E50751 /* StepFourVC.xib in Resources */,
+				E10311301E58268400E50751 /* Main.storyboard in Resources */,
 				E10310F51E5818F100E50751 /* LaunchScreen.storyboard in Resources */,
 				E10310F21E5818F100E50751 /* Assets.xcassets in Resources */,
-				E10310F01E5818F100E50751 /* Main.storyboard in Resources */,
+				E10311231E581B1C00E50751 /* StepFiveVC.xib in Resources */,
+				E103112C1E581FF300E50751 /* DashViewController.xib in Resources */,
+				E10311131E58192800E50751 /* StepOneVC.xib in Resources */,
+				E103111B1E581ABB00E50751 /* StepThreeVC.xib in Resources */,
+				E10311171E581A9C00E50751 /* StepTwoVC.xib in Resources */,
+				E103110F1E58191D00E50751 /* OnboardViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E10310ED1E5818F100E50751 /* ViewController.swift in Sources */,
+				E10311161E581A9C00E50751 /* StepTwoVC.swift in Sources */,
+				E10311271E581E9800E50751 /* Coordinator.swift in Sources */,
+				E103112B1E581FF300E50751 /* DashViewController.swift in Sources */,
+				E10311221E581B1C00E50751 /* StepFiveVC.swift in Sources */,
+				E10311331E58329A00E50751 /* NetworkManager.swift in Sources */,
+				E10311121E58192800E50751 /* StepOneVC.swift in Sources */,
 				E10310EB1E5818F100E50751 /* AppDelegate.swift in Sources */,
+				E103110E1E58191D00E50751 /* OnboardViewController.swift in Sources */,
+				E10311251E581E6E00E50751 /* AppCoordinator.swift in Sources */,
+				E103111E1E581AD200E50751 /* StepFourVC.swift in Sources */,
+				E103111A1E581ABB00E50751 /* StepThreeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,20 +327,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E10310EE1E5818F100E50751 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E10310EF1E5818F100E50751 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E10310F31E5818F100E50751 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E10310F41E5818F100E50751 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E103112E1E58268400E50751 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E103112F1E58268400E50751 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -404,6 +508,7 @@
 				E10311061E5818F100E50751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E10311071E5818F100E50751 /* Build configuration list for PBXNativeTarget "GuardianTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +517,7 @@
 				E10311091E5818F100E50751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

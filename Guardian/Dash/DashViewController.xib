@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashViewController" customModule="Guardian" customModuleProvider="target">
+            <connections>
+                <outlet property="checkinButton" destination="uV7-kA-Cap" id="JXu-7X-HX6"/>
+                <outlet property="view" destination="BAj-4R-52M" id="ceu-yI-kA4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BAj-4R-52M">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV7-kA-Cap">
+                    <rect key="frame" x="164" y="318" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="checkinButtonPressed:" destination="-1" eventType="touchUpInside" id="4gj-lG-uCY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.91886914590935576" blue="0.59554331487673995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uV7-kA-Cap" firstAttribute="centerY" secondItem="BAj-4R-52M" secondAttribute="centerY" id="G1b-Nd-5UK"/>
+                <constraint firstItem="uV7-kA-Cap" firstAttribute="centerX" secondItem="BAj-4R-52M" secondAttribute="centerX" id="tW7-oS-8bt"/>
+            </constraints>
+            <point key="canvasLocation" x="23" y="-63"/>
+        </view>
+    </objects>
+</document>
