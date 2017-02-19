@@ -40,6 +40,10 @@ class OnboardViewController: UIPageViewController {
         setViewControllers([getStepOne()], direction: .forward, animated: false, completion: nil)
         
         print("Hi, we're about to onboard you")
+        let appearance = UIPageControl.appearance()
+        appearance.pageIndicatorTintColor = UIColor.gray
+        appearance.currentPageIndicatorTintColor = UIColor.white
+        appearance.backgroundColor = UIColor.darkGray
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,10 +63,15 @@ class OnboardViewController: UIPageViewController {
         }
     }
     
+    func nextButtonPressed(currentPage: UIViewController) {
+        
+    }
+    
     // Step View Controllers
 
     func getStepOne() -> UIViewController {
         let one = StepOneVC()
+//        one.nextButton.addTarget(self, action: #selector(nextButtonPressed), for: UIControlEvents.allTouchEvents)
         return one
     }
     
@@ -79,11 +88,6 @@ class OnboardViewController: UIPageViewController {
     func getStepFour() -> UIViewController {
         let four = StepFourVC()
         return four
-    }
-    
-    func getStepFive() -> UIViewController {
-        let five = StepFiveVC()
-        return five
     }
     
     func finishOnboard() {
@@ -134,17 +138,14 @@ extension OnboardViewController : UIPageViewControllerDataSource  {
         return 0
     }
     
-    // 5 dots
+    // 4 dots
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 5
+        return 4
     }
     
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController is StepFiveVC {
-            // 5 -> 4
-            return getStepFour()
-        } else if viewController is StepFourVC {
+        if viewController is StepFourVC {
             // 4 -> 3
             return getStepThree()
         } else if viewController is StepThreeVC {
@@ -171,11 +172,8 @@ extension OnboardViewController : UIPageViewControllerDataSource  {
         } else if viewController is StepThreeVC {
             // 3 -> 4
             return getStepFour()
-        } else if viewController is StepFourVC {
-            // 4 -> 5
-            return getStepFive()
         } else {
-            // 5 -> end of the road
+            // 4 -> end of the road
             finishOnboard()
             return nil
         }

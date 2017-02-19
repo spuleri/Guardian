@@ -22,8 +22,6 @@
 		E103111B1E581ABB00E50751 /* StepThreeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10311191E581ABB00E50751 /* StepThreeVC.xib */; };
 		E103111E1E581AD200E50751 /* StepFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103111C1E581AD200E50751 /* StepFourVC.swift */; };
 		E103111F1E581AD200E50751 /* StepFourVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E103111D1E581AD200E50751 /* StepFourVC.xib */; };
-		E10311221E581B1C00E50751 /* StepFiveVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311201E581B1C00E50751 /* StepFiveVC.swift */; };
-		E10311231E581B1C00E50751 /* StepFiveVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E10311211E581B1C00E50751 /* StepFiveVC.xib */; };
 		E10311251E581E6E00E50751 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311241E581E6E00E50751 /* AppCoordinator.swift */; };
 		E10311271E581E9800E50751 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311261E581E9800E50751 /* Coordinator.swift */; };
 		E103112B1E581FF300E50751 /* DashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10311291E581FF300E50751 /* DashViewController.swift */; };
@@ -100,8 +98,6 @@
 		E10311191E581ABB00E50751 /* StepThreeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepThreeVC.xib; path = Onboard/Pages/StepThreeVC.xib; sourceTree = "<group>"; };
 		E103111C1E581AD200E50751 /* StepFourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepFourVC.swift; path = Onboard/Pages/StepFourVC.swift; sourceTree = "<group>"; };
 		E103111D1E581AD200E50751 /* StepFourVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepFourVC.xib; path = Onboard/Pages/StepFourVC.xib; sourceTree = "<group>"; };
-		E10311201E581B1C00E50751 /* StepFiveVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepFiveVC.swift; path = Onboard/Pages/StepFiveVC.swift; sourceTree = "<group>"; };
-		E10311211E581B1C00E50751 /* StepFiveVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = StepFiveVC.xib; path = Onboard/Pages/StepFiveVC.xib; sourceTree = "<group>"; };
 		E10311241E581E6E00E50751 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = Coordinators/AppCoordinator.swift; sourceTree = "<group>"; };
 		E10311261E581E9800E50751 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Coordinators/Coordinator.swift; sourceTree = "<group>"; };
 		E10311291E581FF300E50751 /* DashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashViewController.swift; path = Dash/DashViewController.swift; sourceTree = "<group>"; };
@@ -261,8 +257,6 @@
 				E10311191E581ABB00E50751 /* StepThreeVC.xib */,
 				E103111C1E581AD200E50751 /* StepFourVC.swift */,
 				E103111D1E581AD200E50751 /* StepFourVC.xib */,
-				E10311201E581B1C00E50751 /* StepFiveVC.swift */,
-				E10311211E581B1C00E50751 /* StepFiveVC.xib */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -474,7 +468,6 @@
 				E10311301E58268400E50751 /* Main.storyboard in Resources */,
 				E10310F51E5818F100E50751 /* LaunchScreen.storyboard in Resources */,
 				E1B1DAF41E58F358002BEF80 /* EventCell.xib in Resources */,
-				E10311231E581B1C00E50751 /* StepFiveVC.xib in Resources */,
 				E103112C1E581FF300E50751 /* DashViewController.xib in Resources */,
 				E1B1DB0E1E58FD91002BEF80 /* OpenSans-Regular.ttf in Resources */,
 				E1B1DB0B1E58FD91002BEF80 /* OpenSans-Italic.ttf in Resources */,
@@ -612,7 +605,6 @@
 				E1B1DAEE1E58E1A1002BEF80 /* Event.swift in Sources */,
 				E1B1DB321E59A59D002BEF80 /* DataViewController.swift in Sources */,
 				E1B1DAF31E58F358002BEF80 /* EventCell.swift in Sources */,
-				E10311221E581B1C00E50751 /* StepFiveVC.swift in Sources */,
 				E10311331E58329A00E50751 /* NetworkManager.swift in Sources */,
 				E1B1DB141E592471002BEF80 /* ContactsViewController.swift in Sources */,
 				E10311121E58192800E50751 /* StepOneVC.swift in Sources */,

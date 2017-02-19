@@ -12,7 +12,7 @@ class StepTwoVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // TODO: remove, testing
         _ = UserStore.instance.getCurrentUser()
     }
