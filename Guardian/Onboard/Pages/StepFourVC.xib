@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,14 +20,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Four" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuc-vy-GLK">
-                    <rect key="frame" x="150" y="323" width="75" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboard4" translatesAutoresizingMaskIntoConstraints="NO" id="DuW-JA-zpe">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ch6-zv-29k" customClass="GIDSignInButton">
-                    <rect key="frame" x="84" y="564" width="207" height="50"/>
+                    <rect key="frame" x="84" y="497" width="207" height="50"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="LX6-Aq-kJV"/>
@@ -37,15 +34,19 @@
                     </connections>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.92480661753724469" blue="0.40122637636203862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="iuc-vy-GLK" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7nm-RD-1qw"/>
                 <constraint firstItem="Ch6-zv-29k" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="84" id="M8Y-lm-Nlu"/>
+                <constraint firstItem="DuW-JA-zpe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="O6t-aC-hr9"/>
+                <constraint firstItem="DuW-JA-zpe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OHu-vr-y0f"/>
+                <constraint firstAttribute="trailing" secondItem="DuW-JA-zpe" secondAttribute="trailing" id="T47-1K-Te6"/>
                 <constraint firstAttribute="trailing" secondItem="Ch6-zv-29k" secondAttribute="trailing" constant="84" id="Tho-k7-BT8"/>
-                <constraint firstItem="iuc-vy-GLK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cHn-2t-5fy"/>
-                <constraint firstAttribute="bottom" secondItem="Ch6-zv-29k" secondAttribute="bottom" constant="53" id="uWq-8c-TBq"/>
+                <constraint firstAttribute="bottom" secondItem="DuW-JA-zpe" secondAttribute="bottom" id="oXj-z0-9Rc"/>
+                <constraint firstAttribute="bottom" secondItem="Ch6-zv-29k" secondAttribute="bottom" constant="120" id="uWq-8c-TBq"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Onboard4" width="414" height="736"/>
+    </resources>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,18 +19,31 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2b-Co-kc4">
-                    <rect key="frame" x="151" y="323" width="72" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Onboard2" translatesAutoresizingMaskIntoConstraints="NO" id="YmW-5w-seX">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEX-iQ-7Zw">
+                    <rect key="frame" x="327" y="619" width="34" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="pbL-Nm-eQF"/>
+                        <constraint firstAttribute="width" constant="34" id="uCl-f8-6QD"/>
+                    </constraints>
+                    <state key="normal" image="Next"/>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.74608790415997506" green="0.94769858325410428" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="h2b-Co-kc4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XsK-aw-dHK"/>
-                <constraint firstItem="h2b-Co-kc4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="stC-BU-Udh"/>
+                <constraint firstItem="YmW-5w-seX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2oj-wI-8Hu"/>
+                <constraint firstItem="YmW-5w-seX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9cR-VO-fbo"/>
+                <constraint firstAttribute="bottom" secondItem="wEX-iQ-7Zw" secondAttribute="bottom" constant="14" id="UOX-nA-RjO"/>
+                <constraint firstAttribute="trailing" secondItem="wEX-iQ-7Zw" secondAttribute="trailing" constant="14" id="ecv-c5-35U"/>
+                <constraint firstAttribute="trailing" secondItem="YmW-5w-seX" secondAttribute="trailing" id="i6s-qS-Ynp"/>
+                <constraint firstAttribute="bottom" secondItem="YmW-5w-seX" secondAttribute="bottom" id="wbA-M9-cqP"/>
             </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Next" width="18" height="18"/>
+        <image name="Onboard2" width="414" height="736"/>
+    </resources>
 </document>
