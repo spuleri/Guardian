@@ -20,10 +20,10 @@ class DashViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    var viewModel: TableViewModel!
+    var viewModel: DashboardTableViewModel!
     var navDelegate: DashboardNavDelegate!
     
-    convenience init(viewModel: TableViewModel, navDelegate: DashboardNavDelegate) {
+    convenience init(viewModel: DashboardTableViewModel, navDelegate: DashboardNavDelegate) {
         self.init()
         
         self.viewModel = viewModel
@@ -35,11 +35,6 @@ class DashViewController: UIViewController {
         
         // Configure Nav
         styleNavBar()
-//        self.navigationController?.navigationBar.isHidden = true
-//        self.navigationItem.setHidesBackButton(true, animated: false)
-//        self.navigationItem.title = "Guardian"
-//        self.edgesForExtendedLayout = []
-        
         
         // Configure
         self.tableView.delegate = self
@@ -74,7 +69,7 @@ class DashViewController: UIViewController {
             print("uh oh. no user currently signed in locally at the dash")
         }
         
-        self.viewModel.reloadData(tableView: self.tableView)
+        viewModel.reloadData(tableView: self.tableView)
         
     }
 
@@ -172,7 +167,7 @@ extension DashViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.count
+        return self.viewModel.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -187,7 +182,7 @@ extension DashViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return viewModel.cellAtIndex(tableView: tableView, indexPath: indexPath)
+        return self.viewModel.cellAtIndex(tableView: tableView, indexPath: indexPath)
     }
 }
 

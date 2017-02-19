@@ -39,9 +39,9 @@ class Event: NSObject, NSCoding {
         let event1 = Event(title:"Demo", date: in30Minutes!)
         let event2 = Event(title:"Spring Break", date: next10Days!)
         let event3 = Event(title:"Gainesville", date: in2Hours!)
-        let event4 = Event(title:"Here!", date: in90Seconds!)
+        let event4 = Event(title:"Dirac", date: in90Seconds!)
         let event5 = Event(title:"Down the hall!", date: in45Seconds!)
-        let event6 = Event(title:"Right here!", date: in30Seconds!)
+        let event6 = Event(title:"FSU Campus", date: in30Seconds!)
         
         let events = [event1, event2, event3, event4, event5, event6]
         
@@ -101,7 +101,7 @@ class Event: NSObject, NSCoding {
             print(timeInterval)
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval,
                                                             repeats: false)
-            let identifier = "EventNote-\(index)"
+            let identifier = event.title
             let request = UNNotificationRequest(identifier: identifier,
                                                 content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in

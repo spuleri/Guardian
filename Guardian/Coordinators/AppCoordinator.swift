@@ -14,10 +14,15 @@ import UserNotifications
 
 final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDelegate {
     
+    // hacky lol
+    var dashViewModel: DashboardViewModel? = nil
+    
     func start() {
         // TODO: hacky for deving and testing.
         // in future will check if a user is currently signed in
         let doOnboard = true
+        
+        
         
         if doOnboard {
             self.doOnboard()
@@ -27,14 +32,14 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
     }
     
     // MARK: Navigation
-    private func doOnboard() {
+    func doOnboard() {
         let vc = OnboardViewController(coordinator: self)
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    private func doDash() {
-        let viewModel = DashboardViewModel()
-        let vc = DashViewController(viewModel: viewModel, navDelegate: self)
+    func doDash() {
+        dashViewModel = DashboardViewModel()
+        let vc = DashViewController(viewModel: dashViewModel!, navDelegate: self)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -65,7 +70,7 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
     }
     
     func touchIdAuth(isSuccess: @escaping (Bool) -> Void) {
-        return authenticateUser(isSuccess: isSuccess)
+        return authenticateUser(noteToRemove: nil, isSuccess: isSuccess)
     }
 
     
@@ -85,7 +90,7 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
 //    }
     
     // MARK: Touch ID Auth
-    func authenticateUser(isSuccess: @escaping (Bool) -> Void) {
+    func authenticateUser(noteToRemove: String?, isSuccess: @escaping (Bool) -> Void) {
         let context: LAContext = LAContext()
         
         // Setup data
@@ -98,12 +103,12 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
                 (success, error) in
                 // sry mom this is way too hacky and messy, but i have limited time
                 if success {
-                    self.touchIDSuccess(sucess: success)
+                    self.touchIDSuccess(noteToRemove: noteToRemove, sucess: success)
                     return
                 } else {
                     // Authentification failed
                     print(error!.localizedDescription)
-                    self.touchIDSuccess(sucess: success)
+                    self.touchIDSuccess(noteToRemove: noteToRemove, sucess: success)
                     isSuccess(false)
 
                 }
@@ -118,12 +123,17 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
         
     }
     
-    private func touchIDSuccess(sucess: Bool) {
+    private func touchIDSuccess(noteToRemove: String?, sucess: Bool) {
         // Update UI!
         // do so on main queue
         OperationQueue.main.addOperation {
             print("Successfully validated fingerprint!!! YAY")
             self.presentAuthAlert(isAuthed: sucess)
+            
+            if let noteTitle = noteToRemove {
+                // Remove from the data source
+                self.dashViewModel?.removeEventByTitle(title: noteTitle)
+            }
         }
         
     }
@@ -149,6 +159,7 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
 
 
 extension AppCoordinator: UNUserNotificationCenterDelegate {
+    
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -168,7 +179,9 @@ extension AppCoordinator: UNUserNotificationCenterDelegate {
                 print("Dismiss Action")
             case UNNotificationDefaultActionIdentifier:
                 print("Default - tapped notifiation and opened app!!")
-                self.authenticateUser(isSuccess: {_ in })
+                let title = response.notification.request.identifier
+                self.authenticateUser(noteToRemove: title, isSuccess: {_ in })
+            
             case "Snooze":
                 print("Snooze")
             case "Delete":

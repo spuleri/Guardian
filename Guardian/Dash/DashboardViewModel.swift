@@ -8,8 +8,11 @@
 
 import Foundation
 
+protocol DashboardTableViewModel: TableViewModel {
+    func removeEventByTitle(title: String) -> Bool
+}
 
-class DashboardViewModel: TableViewModel {
+class DashboardViewModel: DashboardTableViewModel {
     
     var events: [Event] = []
     
@@ -53,6 +56,12 @@ class DashboardViewModel: TableViewModel {
         
         tableView.reloadData()
         
+    }
+    
+    func removeEventByTitle(title: String) -> Bool {
+        self.events = events.filter({$0.title == title})
+//        Event.encode(events: self.events)
+        return true
     }
     
     
