@@ -12,7 +12,10 @@ import Foundation
 // Good stuff: http://swiftandpainless.com/nscoding-and-swift-structs/
 struct User {
     let name: String
-    let googleServerAuthCode: String // Should probably save this in keychain lol
+
+    // Should probably save this in keychain lol
+    let googleServerAuthCode: String
+    let idToken: String
     
 
     // MARK: Encoding and Decoding through Helper Class
@@ -67,16 +70,18 @@ extension User {
             // Get strings
             guard let name = aDecoder.decodeObject(forKey: "name") as? String else { user = nil; super.init(); return nil }
             guard let googleServerAuthCode = aDecoder.decodeObject(forKey: "googleServerAuthCode") as? String else { user = nil; super.init(); return nil }
+            guard let idToken = aDecoder.decodeObject(forKey: "idToken") as? String else { user = nil; super.init(); return nil }
             
             // We dont need to write a constructor for structs
-            user = User(name: name, googleServerAuthCode: googleServerAuthCode)
-            
+            user = User(name: name, googleServerAuthCode: googleServerAuthCode, idToken: idToken)
+
             super.init()
         }
         
         func encode(with aCoder: NSCoder) {
             aCoder.encode(user?.name, forKey: "name")
             aCoder.encode(user?.googleServerAuthCode, forKey: "googleServerAuthCode")
+            aCoder.encode(user?.idToken, forKey: "idToken")
         }
     }
     

@@ -36,6 +36,23 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             }
         }
     }
+    
+    func checkLocation() -> Bool {
+        if CLLocationManager.locationServicesEnabled() {
+            switch(CLLocationManager.authorizationStatus()) {
+            case .notDetermined, .restricted, .denied:
+                print("No access")
+                return false
+            case .authorizedAlways, .authorizedWhenInUse:
+                print("Access")
+                return true
+            }
+        } else {
+            print("Location services are not enabled")
+            return false
+            
+        }
+    }
 
     
 }

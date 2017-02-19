@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashViewController" customModule="Guardian" customModuleProvider="target">
             <connections>
                 <outlet property="checkinButton" destination="uV7-kA-Cap" id="JXu-7X-HX6"/>
+                <outlet property="tableView" destination="erx-vn-LgD" id="WoT-Ag-nPu"/>
                 <outlet property="view" destination="BAj-4R-52M" id="ceu-yI-kA4"/>
             </connections>
         </placeholder>
@@ -20,9 +21,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV7-kA-Cap">
-                    <rect key="frame" x="164" y="318" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-1g-PTA">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="erx-vn-LgD">
+                    <rect key="frame" x="34" y="84" width="307" height="468"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uV7-kA-Cap">
+                    <rect key="frame" x="111" y="584" width="153" height="63"/>
+                    <state key="normal" image="Check in"/>
                     <connections>
                         <action selector="checkinButtonPressed:" destination="-1" eventType="touchUpInside" id="4gj-lG-uCY"/>
                     </connections>
@@ -30,10 +38,22 @@
             </subviews>
             <color key="backgroundColor" red="1" green="0.91886914590935576" blue="0.59554331487673995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="uV7-kA-Cap" firstAttribute="centerY" secondItem="BAj-4R-52M" secondAttribute="centerY" id="G1b-Nd-5UK"/>
+                <constraint firstItem="e4k-1g-PTA" firstAttribute="leading" secondItem="BAj-4R-52M" secondAttribute="leading" id="0hY-dh-ZA2"/>
+                <constraint firstItem="uV7-kA-Cap" firstAttribute="top" secondItem="erx-vn-LgD" secondAttribute="bottom" constant="32" id="AmB-TT-BeS"/>
+                <constraint firstItem="uV7-kA-Cap" firstAttribute="centerY" secondItem="BAj-4R-52M" secondAttribute="centerY" constant="282" id="G1b-Nd-5UK"/>
+                <constraint firstItem="erx-vn-LgD" firstAttribute="top" secondItem="BAj-4R-52M" secondAttribute="top" constant="84" id="HgN-nl-thB"/>
+                <constraint firstAttribute="bottom" secondItem="e4k-1g-PTA" secondAttribute="bottom" id="Ihm-DA-3id"/>
+                <constraint firstAttribute="trailing" secondItem="e4k-1g-PTA" secondAttribute="trailing" id="fg6-L6-ibP"/>
+                <constraint firstAttribute="trailing" secondItem="erx-vn-LgD" secondAttribute="trailing" constant="34" id="lSZ-x9-L0z"/>
+                <constraint firstItem="erx-vn-LgD" firstAttribute="leading" secondItem="BAj-4R-52M" secondAttribute="leading" constant="34" id="qTS-sd-FAD"/>
+                <constraint firstItem="e4k-1g-PTA" firstAttribute="top" secondItem="BAj-4R-52M" secondAttribute="top" id="run-m5-dMO"/>
                 <constraint firstItem="uV7-kA-Cap" firstAttribute="centerX" secondItem="BAj-4R-52M" secondAttribute="centerX" id="tW7-oS-8bt"/>
             </constraints>
-            <point key="canvasLocation" x="23" y="-63"/>
+            <point key="canvasLocation" x="22.5" y="-63.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="414" height="736"/>
+        <image name="Check in" width="153" height="63"/>
+    </resources>
 </document>

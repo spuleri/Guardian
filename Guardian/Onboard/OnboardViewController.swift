@@ -10,6 +10,7 @@ import UIKit
 
 protocol OnboardFinisherDelegate {
     func finishOnboard()
+    func touchIdAuth(isSuccess: @escaping (Bool) -> Void)
 }
 
 class OnboardViewController: UIPageViewController {
@@ -89,6 +90,13 @@ class OnboardViewController: UIPageViewController {
         print("Finishing onboard")
         
         self.onBoardDelegate?.finishOnboard()
+        
+        self.onBoardDelegate?.touchIdAuth() {
+            isAuthed in
+            print("yoo am i authed in the onboardVC?? \(isAuthed)")
+        }
+        
+        
         
 //        // Create user with information
 //        let user = User(name: nameEntered, wordsToAvoid: avoidWordsEntered, wordsToUse: useWordsEntered, wordOfTheDay: "eloquence", lastSessionSentiment: 120.0)

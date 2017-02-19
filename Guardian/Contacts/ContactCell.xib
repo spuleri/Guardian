@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="74" id="KGk-i7-Jjw" customClass="ContactCell" customModule="Guardian" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contact Background" translatesAutoresizingMaskIntoConstraints="NO" id="MJ5-8E-RVc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="73"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jacob" translatesAutoresizingMaskIntoConstraints="NO" id="X57-iD-3bt">
+                        <rect key="frame" x="92" y="17" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="K2V-aB-Zdq"/>
+                            <constraint firstAttribute="height" constant="40" id="eF0-mA-CcL"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="889.942.3412" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dx7-6t-MWz">
+                        <rect key="frame" x="138" y="37" width="75" height="17"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                        <color key="textColor" red="0.49803921568627452" green="0.50588235294117645" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qls-HF-0iO">
+                        <rect key="frame" x="262" y="12" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="0gd-Hs-EnI"/>
+                            <constraint firstAttribute="width" constant="50" id="cT8-Uj-KnV"/>
+                        </constraints>
+                        <state key="normal" image="Hamburger"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-qM-r8i">
+                        <rect key="frame" x="26" y="7" width="25" height="58"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="42"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jacob Ville" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISo-b3-7su">
+                        <rect key="frame" x="138" y="11" width="90" height="28"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="20"/>
+                        <color key="textColor" red="0.19607843137254902" green="0.18431372549019609" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dx7-6t-MWz" firstAttribute="leading" secondItem="X57-iD-3bt" secondAttribute="trailing" constant="6" id="3AG-uM-I95"/>
+                    <constraint firstItem="X57-iD-3bt" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9RX-TI-mBX"/>
+                    <constraint firstItem="NhR-qM-r8i" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CQe-K4-pyE"/>
+                    <constraint firstAttribute="trailing" secondItem="MJ5-8E-RVc" secondAttribute="trailing" id="Cn7-gJ-nGc"/>
+                    <constraint firstItem="ISo-b3-7su" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="Ls9-QI-vBJ"/>
+                    <constraint firstItem="Qls-HF-0iO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ov0-xz-QGi"/>
+                    <constraint firstItem="MJ5-8E-RVc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RDw-BI-bOL"/>
+                    <constraint firstItem="X57-iD-3bt" firstAttribute="leading" secondItem="NhR-qM-r8i" secondAttribute="trailing" constant="40.5" id="T4C-Q6-gPc"/>
+                    <constraint firstItem="MJ5-8E-RVc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wtn-5x-C6n"/>
+                    <constraint firstItem="Dx7-6t-MWz" firstAttribute="top" secondItem="ISo-b3-7su" secondAttribute="bottom" constant="-2" id="ccR-1B-FPE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Qls-HF-0iO" secondAttribute="trailing" id="grT-o6-LYY"/>
+                    <constraint firstItem="ISo-b3-7su" firstAttribute="leading" secondItem="X57-iD-3bt" secondAttribute="trailing" constant="6" id="je5-Sb-eQ8"/>
+                    <constraint firstAttribute="bottom" secondItem="MJ5-8E-RVc" secondAttribute="bottom" id="kG6-YZ-NdM"/>
+                    <constraint firstItem="Dx7-6t-MWz" firstAttribute="leading" secondItem="ISo-b3-7su" secondAttribute="leading" id="oS4-2p-XpB"/>
+                    <constraint firstItem="NhR-qM-r8i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="18" id="uc1-ku-hvh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contactImage" destination="X57-iD-3bt" id="T5u-Vs-gd8"/>
+                <outlet property="defaultBackground" destination="MJ5-8E-RVc" id="C5g-Vp-Dyl"/>
+                <outlet property="moveButton" destination="Qls-HF-0iO" id="3nd-d3-NMR"/>
+                <outlet property="name" destination="ISo-b3-7su" id="C2W-eX-ULt"/>
+                <outlet property="phoneNumber" destination="Dx7-6t-MWz" id="uLV-GN-1Iq"/>
+                <outlet property="rankLabel" destination="NhR-qM-r8i" id="TFY-29-OeN"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="39"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Contact Background" width="362" height="82"/>
+        <image name="Hamburger" width="22" height="18"/>
+        <image name="Jacob" width="48" height="48"/>
+    </resources>
+</document>

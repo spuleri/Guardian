@@ -10,7 +10,6 @@
 		112279E550E12BF5D34C4296 /* Pods_GuardianTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C80B61686A58BACE215A70 /* Pods_GuardianTests.framework */; };
 		7A051594E3AF0C07B87DF8B8 /* Pods_Guardian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB2832488284D5B30F3A7DE /* Pods_Guardian.framework */; };
 		E10310EB1E5818F100E50751 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10310EA1E5818F100E50751 /* AppDelegate.swift */; };
-		E10310F21E5818F100E50751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10310F11E5818F100E50751 /* Assets.xcassets */; };
 		E10310F51E5818F100E50751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10310F31E5818F100E50751 /* LaunchScreen.storyboard */; };
 		E10311001E5818F100E50751 /* GuardianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10310FF1E5818F100E50751 /* GuardianTests.swift */; };
 		E103110E1E58191D00E50751 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103110C1E58191D00E50751 /* OnboardViewController.swift */; };
@@ -35,6 +34,31 @@
 		E103113C1E5894DC00E50751 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103113B1E5894DC00E50751 /* LocationManager.swift */; };
 		E103113F1E589AF800E50751 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103113E1E589AF800E50751 /* User.swift */; };
 		E1B1DAEA1E58AA63002BEF80 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAE91E58AA63002BEF80 /* UserStore.swift */; };
+		E1B1DAEC1E58D330002BEF80 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B1DAEB1E58D330002BEF80 /* LocalAuthentication.framework */; };
+		E1B1DAEE1E58E1A1002BEF80 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAED1E58E1A1002BEF80 /* Event.swift */; };
+		E1B1DAF31E58F358002BEF80 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAF11E58F358002BEF80 /* EventCell.swift */; };
+		E1B1DAF41E58F358002BEF80 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DAF21E58F358002BEF80 /* EventCell.xib */; };
+		E1B1DAF61E58F380002BEF80 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAF51E58F380002BEF80 /* DashboardViewModel.swift */; };
+		E1B1DAF81E58F89C002BEF80 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAF71E58F89C002BEF80 /* CellData.swift */; };
+		E1B1DB061E58FD91002BEF80 /* Apache License.txt in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DAFB1E58FD91002BEF80 /* Apache License.txt */; };
+		E1B1DB071E58FD91002BEF80 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DAFC1E58FD91002BEF80 /* OpenSans-Bold.ttf */; };
+		E1B1DB081E58FD91002BEF80 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DAFD1E58FD91002BEF80 /* OpenSans-BoldItalic.ttf */; };
+		E1B1DB091E58FD91002BEF80 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DAFE1E58FD91002BEF80 /* OpenSans-ExtraBold.ttf */; };
+		E1B1DB0A1E58FD91002BEF80 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DAFF1E58FD91002BEF80 /* OpenSans-ExtraBoldItalic.ttf */; };
+		E1B1DB0B1E58FD91002BEF80 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB001E58FD91002BEF80 /* OpenSans-Italic.ttf */; };
+		E1B1DB0C1E58FD91002BEF80 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB011E58FD91002BEF80 /* OpenSans-Light.ttf */; };
+		E1B1DB0D1E58FD91002BEF80 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB021E58FD91002BEF80 /* OpenSans-LightItalic.ttf */; };
+		E1B1DB0E1E58FD91002BEF80 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB031E58FD91002BEF80 /* OpenSans-Regular.ttf */; };
+		E1B1DB0F1E58FD91002BEF80 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB041E58FD91002BEF80 /* OpenSans-Semibold.ttf */; };
+		E1B1DB101E58FD91002BEF80 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB051E58FD91002BEF80 /* OpenSans-SemiboldItalic.ttf */; };
+		E1B1DB141E592471002BEF80 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB121E592471002BEF80 /* ContactsViewController.swift */; };
+		E1B1DB151E592471002BEF80 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB131E592471002BEF80 /* ContactsViewController.xib */; };
+		E1B1DB181E592D07002BEF80 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB161E592D07002BEF80 /* ContactCell.swift */; };
+		E1B1DB191E592D07002BEF80 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB171E592D07002BEF80 /* ContactCell.xib */; };
+		E1B1DB1B1E592D8B002BEF80 /* ContactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB1A1E592D8B002BEF80 /* ContactsViewModel.swift */; };
+		E1B1DB1D1E592DE8002BEF80 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB1C1E592DE8002BEF80 /* TableViewModel.swift */; };
+		E1B1DB1F1E592F27002BEF80 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB1E1E592F27002BEF80 /* Contact.swift */; };
+		E1B1DB221E59453E002BEF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB211E59453E002BEF80 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +80,6 @@
 		D003B319B0898AA3BBA0A313 /* Pods-GuardianTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GuardianTests/Pods-GuardianTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E10310E71E5818F100E50751 /* Guardian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardian.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E10310EA1E5818F100E50751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E10310F11E5818F100E50751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10310F41E5818F100E50751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10310F61E5818F100E50751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E10310FB1E5818F100E50751 /* GuardianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +107,32 @@
 		E10311361E58706B00E50751 /* Guardian-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guardian-Bridging-Header.h"; sourceTree = "<group>"; };
 		E103113B1E5894DC00E50751 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Location/LocationManager.swift; sourceTree = "<group>"; };
 		E103113E1E589AF800E50751 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
-		E1B1DAE91E58AA63002BEF80 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Models/UserStore.swift; sourceTree = "<group>"; };
+		E1B1DAE91E58AA63002BEF80 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Util/UserStore.swift; sourceTree = "<group>"; };
+		E1B1DAEB1E58D330002BEF80 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		E1B1DAED1E58E1A1002BEF80 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
+		E1B1DAF11E58F358002BEF80 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = Dash/EventCell.swift; sourceTree = "<group>"; };
+		E1B1DAF21E58F358002BEF80 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = Dash/EventCell.xib; sourceTree = "<group>"; };
+		E1B1DAF51E58F380002BEF80 /* DashboardViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewModel.swift; path = Dash/DashboardViewModel.swift; sourceTree = "<group>"; };
+		E1B1DAF71E58F89C002BEF80 /* CellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellData.swift; path = Util/CellData.swift; sourceTree = "<group>"; };
+		E1B1DAFB1E58FD91002BEF80 /* Apache License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Apache License.txt"; sourceTree = "<group>"; };
+		E1B1DAFC1E58FD91002BEF80 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E1B1DAFD1E58FD91002BEF80 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E1B1DAFE1E58FD91002BEF80 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E1B1DAFF1E58FD91002BEF80 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E1B1DB001E58FD91002BEF80 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		E1B1DB011E58FD91002BEF80 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		E1B1DB021E58FD91002BEF80 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		E1B1DB031E58FD91002BEF80 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		E1B1DB041E58FD91002BEF80 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		E1B1DB051E58FD91002BEF80 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		E1B1DB121E592471002BEF80 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewController.swift; path = Contacts/ContactsViewController.swift; sourceTree = "<group>"; };
+		E1B1DB131E592471002BEF80 /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactsViewController.xib; path = Contacts/ContactsViewController.xib; sourceTree = "<group>"; };
+		E1B1DB161E592D07002BEF80 /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactCell.swift; path = Contacts/ContactCell.swift; sourceTree = "<group>"; };
+		E1B1DB171E592D07002BEF80 /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactCell.xib; path = Contacts/ContactCell.xib; sourceTree = "<group>"; };
+		E1B1DB1A1E592D8B002BEF80 /* ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewModel.swift; path = Contacts/ContactsViewModel.swift; sourceTree = "<group>"; };
+		E1B1DB1C1E592DE8002BEF80 /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewModel.swift; path = Util/TableViewModel.swift; sourceTree = "<group>"; };
+		E1B1DB1E1E592F27002BEF80 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Contacts/Contact.swift; sourceTree = "<group>"; };
+		E1B1DB211E59453E002BEF80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B1DAEC1E58D330002BEF80 /* LocalAuthentication.framework in Frameworks */,
 				7A051594E3AF0C07B87DF8B8 /* Pods_Guardian.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +170,7 @@
 		9906DC2EAEA982EB4659BDEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1B1DAEB1E58D330002BEF80 /* LocalAuthentication.framework */,
 				2BB2832488284D5B30F3A7DE /* Pods_Guardian.framework */,
 				A2C80B61686A58BACE215A70 /* Pods_GuardianTests.framework */,
 			);
@@ -150,17 +200,20 @@
 		E10310E91E5818F100E50751 /* Guardian */ = {
 			isa = PBXGroup;
 			children = (
+				E1B1DB201E592F52002BEF80 /* Util */,
+				E1B1DB111E59244E002BEF80 /* Contacts */,
+				E1B1DAF91E58FD91002BEF80 /* Resources */,
 				E103113D1E589AEB00E50751 /* Models */,
 				E103113A1E5894C800E50751 /* Location */,
-				E10311341E58416300E50751 /* GoogleService-Info.plist */,
 				E10311311E58328600E50751 /* Network */,
 				E103112D1E58257500E50751 /* Coordinators */,
 				E10311281E581FDE00E50751 /* Dash */,
 				E103110A1E5818FF00E50751 /* Onboard */,
 				E10310EA1E5818F100E50751 /* AppDelegate.swift */,
-				E10310F11E5818F100E50751 /* Assets.xcassets */,
+				E1B1DB211E59453E002BEF80 /* Assets.xcassets */,
 				E103112E1E58268400E50751 /* Main.storyboard */,
 				E10310F31E5818F100E50751 /* LaunchScreen.storyboard */,
+				E10311341E58416300E50751 /* GoogleService-Info.plist */,
 				E10310F61E5818F100E50751 /* Info.plist */,
 				E10311361E58706B00E50751 /* Guardian-Bridging-Header.h */,
 			);
@@ -208,6 +261,9 @@
 			children = (
 				E10311291E581FF300E50751 /* DashViewController.swift */,
 				E103112A1E581FF300E50751 /* DashViewController.xib */,
+				E1B1DAF11E58F358002BEF80 /* EventCell.swift */,
+				E1B1DAF21E58F358002BEF80 /* EventCell.xib */,
+				E1B1DAF51E58F380002BEF80 /* DashboardViewModel.swift */,
 			);
 			name = Dash;
 			sourceTree = "<group>";
@@ -241,9 +297,58 @@
 			isa = PBXGroup;
 			children = (
 				E103113E1E589AF800E50751 /* User.swift */,
-				E1B1DAE91E58AA63002BEF80 /* UserStore.swift */,
+				E1B1DAED1E58E1A1002BEF80 /* Event.swift */,
+				E1B1DB1E1E592F27002BEF80 /* Contact.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E1B1DAF91E58FD91002BEF80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1DAFA1E58FD91002BEF80 /* open-sans */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E1B1DAFA1E58FD91002BEF80 /* open-sans */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1DAFB1E58FD91002BEF80 /* Apache License.txt */,
+				E1B1DAFC1E58FD91002BEF80 /* OpenSans-Bold.ttf */,
+				E1B1DAFD1E58FD91002BEF80 /* OpenSans-BoldItalic.ttf */,
+				E1B1DAFE1E58FD91002BEF80 /* OpenSans-ExtraBold.ttf */,
+				E1B1DAFF1E58FD91002BEF80 /* OpenSans-ExtraBoldItalic.ttf */,
+				E1B1DB001E58FD91002BEF80 /* OpenSans-Italic.ttf */,
+				E1B1DB011E58FD91002BEF80 /* OpenSans-Light.ttf */,
+				E1B1DB021E58FD91002BEF80 /* OpenSans-LightItalic.ttf */,
+				E1B1DB031E58FD91002BEF80 /* OpenSans-Regular.ttf */,
+				E1B1DB041E58FD91002BEF80 /* OpenSans-Semibold.ttf */,
+				E1B1DB051E58FD91002BEF80 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = "open-sans";
+			sourceTree = "<group>";
+		};
+		E1B1DB111E59244E002BEF80 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1DB121E592471002BEF80 /* ContactsViewController.swift */,
+				E1B1DB131E592471002BEF80 /* ContactsViewController.xib */,
+				E1B1DB161E592D07002BEF80 /* ContactCell.swift */,
+				E1B1DB171E592D07002BEF80 /* ContactCell.xib */,
+				E1B1DB1A1E592D8B002BEF80 /* ContactsViewModel.swift */,
+			);
+			name = Contacts;
+			sourceTree = "<group>";
+		};
+		E1B1DB201E592F52002BEF80 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1DAE91E58AA63002BEF80 /* UserStore.swift */,
+				E1B1DAF71E58F89C002BEF80 /* CellData.swift */,
+				E1B1DB1C1E592DE8002BEF80 /* TableViewModel.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,12 +443,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				E103111F1E581AD200E50751 /* StepFourVC.xib in Resources */,
+				E1B1DB221E59453E002BEF80 /* Assets.xcassets in Resources */,
+				E1B1DB151E592471002BEF80 /* ContactsViewController.xib in Resources */,
+				E1B1DB0A1E58FD91002BEF80 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				E1B1DB061E58FD91002BEF80 /* Apache License.txt in Resources */,
+				E1B1DB0C1E58FD91002BEF80 /* OpenSans-Light.ttf in Resources */,
 				E10311301E58268400E50751 /* Main.storyboard in Resources */,
 				E10310F51E5818F100E50751 /* LaunchScreen.storyboard in Resources */,
-				E10310F21E5818F100E50751 /* Assets.xcassets in Resources */,
+				E1B1DAF41E58F358002BEF80 /* EventCell.xib in Resources */,
 				E10311231E581B1C00E50751 /* StepFiveVC.xib in Resources */,
 				E103112C1E581FF300E50751 /* DashViewController.xib in Resources */,
+				E1B1DB0E1E58FD91002BEF80 /* OpenSans-Regular.ttf in Resources */,
+				E1B1DB0B1E58FD91002BEF80 /* OpenSans-Italic.ttf in Resources */,
+				E1B1DB0F1E58FD91002BEF80 /* OpenSans-Semibold.ttf in Resources */,
+				E1B1DB101E58FD91002BEF80 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				E1B1DB191E592D07002BEF80 /* ContactCell.xib in Resources */,
+				E1B1DB071E58FD91002BEF80 /* OpenSans-Bold.ttf in Resources */,
+				E1B1DB081E58FD91002BEF80 /* OpenSans-BoldItalic.ttf in Resources */,
 				E10311131E58192800E50751 /* StepOneVC.xib in Resources */,
+				E1B1DB0D1E58FD91002BEF80 /* OpenSans-LightItalic.ttf in Resources */,
+				E1B1DB091E58FD91002BEF80 /* OpenSans-ExtraBold.ttf in Resources */,
 				E103111B1E581ABB00E50751 /* StepThreeVC.xib in Resources */,
 				E10311351E58416300E50751 /* GoogleService-Info.plist in Resources */,
 				E10311171E581A9C00E50751 /* StepTwoVC.xib in Resources */,
@@ -462,14 +581,23 @@
 				E10311161E581A9C00E50751 /* StepTwoVC.swift in Sources */,
 				E10311271E581E9800E50751 /* Coordinator.swift in Sources */,
 				E103112B1E581FF300E50751 /* DashViewController.swift in Sources */,
+				E1B1DB1F1E592F27002BEF80 /* Contact.swift in Sources */,
+				E1B1DB181E592D07002BEF80 /* ContactCell.swift in Sources */,
+				E1B1DAEE1E58E1A1002BEF80 /* Event.swift in Sources */,
+				E1B1DAF31E58F358002BEF80 /* EventCell.swift in Sources */,
 				E10311221E581B1C00E50751 /* StepFiveVC.swift in Sources */,
 				E10311331E58329A00E50751 /* NetworkManager.swift in Sources */,
+				E1B1DB141E592471002BEF80 /* ContactsViewController.swift in Sources */,
 				E10311121E58192800E50751 /* StepOneVC.swift in Sources */,
 				E10310EB1E5818F100E50751 /* AppDelegate.swift in Sources */,
 				E1B1DAEA1E58AA63002BEF80 /* UserStore.swift in Sources */,
 				E103110E1E58191D00E50751 /* OnboardViewController.swift in Sources */,
+				E1B1DB1D1E592DE8002BEF80 /* TableViewModel.swift in Sources */,
 				E103113C1E5894DC00E50751 /* LocationManager.swift in Sources */,
+				E1B1DAF61E58F380002BEF80 /* DashboardViewModel.swift in Sources */,
 				E10311251E581E6E00E50751 /* AppCoordinator.swift in Sources */,
+				E1B1DAF81E58F89C002BEF80 /* CellData.swift in Sources */,
+				E1B1DB1B1E592D8B002BEF80 /* ContactsViewModel.swift in Sources */,
 				E103111E1E581AD200E50751 /* StepFourVC.swift in Sources */,
 				E103111A1E581ABB00E50751 /* StepThreeVC.swift in Sources */,
 			);

@@ -27,6 +27,17 @@ class NetworkManager {
         makeGETRequest(url: url)
     }
     
+    func getEvents(user: User) {
+        // Set up the URL
+        let endpoint = base + "events"
+        guard let url = URL(string: endpoint) else {
+            print("Error: cannot create URL")
+            return
+        }
+        
+        makeGETRequest(url: url)
+    }
+    
     func authWithGoogle(idToken: String, accessToken: String, refreshToken: String, serverAuthCode: String) {
         // Set up the URL
         let endpoint = base + "auth"
@@ -39,8 +50,7 @@ class NetworkManager {
                           "access_token": accessToken,
                           "refresh_token": refreshToken,
                           "server_auth_code": serverAuthCode,
-                          "secretMessage": "omg sergio is the coolest",
-                          "keys": "🔑🔑🔑"]
+                          "secretMessage": "omg sergio is the coolest"]
         
         makePOSTRequest(url: url, parameters: parameters as JSONObj)
     }
@@ -101,7 +111,7 @@ class NetworkManager {
         var request = urlRequest
         
         // Add our auth header to every request
-        request.setValue("server_auth_code \((UserStore.instance.getCurrentUser()?.googleServerAuthCode)!)", forHTTPHeaderField: "Authorization")
+        request.setValue((UserStore.instance.getCurrentUser()?.idToken)!, forHTTPHeaderField: "id_token")
 
         
         // make the request
@@ -119,8 +129,6 @@ class NetworkManager {
                 print("Error: did not receive data")
                 return
             }
-            
-            
 
             // parse the result as JSON
             do {
@@ -149,7 +157,7 @@ class NetworkManager {
         
         task.resume()
         
-        print("Made HTTP request:\n\(request.debugDescription)\n\(request.allHTTPHeaderFields)")
+        print("\nMade HTTP request:\n\(request.debugDescription)\n\(request.allHTTPHeaderFields)\n)")
         
     }
 }
