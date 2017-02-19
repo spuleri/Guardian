@@ -48,20 +48,24 @@ class ContactsViewModel: ContactsTableViewModel {
     
     func reloadData(tableView: UITableView) {
         // TODO: Network call to update events array
-        
+    
         // Dummy data rn
-        
-        let contact1 =  Contact(name: "Joseph Pena", phone: "410.982.3341", rank: 1, imageName: "Joseph", isEmergency: false)
-        
-        let contact2 =  Contact(name: "Sergio Puleri", phone: "407/332.9164", rank: 2, imageName: "Sergio", isEmergency: false)
-        
-        let contact3 =  Contact(name: "Tatiana Rincon", phone: "889.945.3620", rank: 3, imageName: "Tatiana", isEmergency: false)
-        
-        let contact4 =  Contact(name: "Conor Landry", phone: "342.880.3912", rank: 4, imageName: "Conor", isEmergency: false)
+//        
+//        let contact1 =  Contact(name: "Joseph Pena", phone: "410.982.3341", rank: 1, imageName: "Joseph", isEmergency: false)
+//        
+//        let contact2 =  Contact(name: "Sergio Puleri", phone: "407/332.9164", rank: 2, imageName: "Sergio", isEmergency: false)
+//        
+//        let contact3 =  Contact(name: "Tatiana Rincon", phone: "889.945.3620", rank: 3, imageName: "Tatiana", isEmergency: false)
+//        
+//        let contact4 =  Contact(name: "Conor Landry", phone: "342.880.3912", rank: 4, imageName: "Conor", isEmergency: false)
         
         // Add on extra emergency contact always
         let emergencyContact =  Contact(name: "", phone: "", rank: 5, imageName: "", isEmergency: true)
-        contacts = [contact1, contact2, contact3, contact4, emergencyContact]
+//        contacts = [contact1, contact2, contact3, contact4]
+        
+        contacts = (UserStore.instance.getCurrentUser()?.contacts)!
+        
+        contacts.append(emergencyContact)
         
         // Always sort by rank
         contacts.sort(by: { $0.rank < $1.rank})

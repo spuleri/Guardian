@@ -51,12 +51,12 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
 
     // MARK: DashboardNavDelegate
     func goToSettings() {
-        finishCurrentVC()
+        let vc = SettingsViewController()
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     func goToContacts() {
-//        finishCurrentVC()
-        
         let vc = ContactsViewController()
         let viewModel = ContactsViewModel(dragDelegate: vc)
         vc.viewModel = viewModel
@@ -89,39 +89,26 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
         
         // Setup data
         var error: NSError?
-        var localizedReasonStringThatIsntReallyLocalized = "We need to verify your safety via your fingerprint so others cant oretend to be you!"
+        var localizedReasonStringThatIsntReallyLocalized = "Verify your safety via your fingerprint please"
         
         if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             
             context.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonStringThatIsntReallyLocalized) {
                 (success, error) in
+                // sry mom this is way too hacky and messy, but i have limited time
                 if success {
-                    self.touchIDSuccess()
-                    isSuccess(true)
+                    self.touchIDSuccess(sucess: success)
+                    return
                 } else {
                     // Authentification failed
                     print(error!.localizedDescription)
-                    
+                    self.touchIDSuccess(sucess: success)
                     isSuccess(false)
-//                    switch error as! LAError {
-//                        case .systemCancel:
-//                            print("Authentication cancelled by the system")
-//                        case .userCancel:
-//                            print("Authentication cancelled by the user")
-//                        case .userFallback:
-//                            println("User wants to use a password")
-//                            // We show the alert view in the main thread (always update the UI in the main thread)
-//                            OperationQueue.main.addOperation {
-//                                self.showPasswordAlert()
-//                            }
-//                        default:
-//                            print("Authentication failed")
-//                            OperationQueue.main.addOperation {
-//                                print("Successfully validated fingerprint!!! YAY")
-//                            }
-//                    }
+
                 }
             }
+            
+            return isSuccess(false)
 
         }
         
@@ -130,14 +117,31 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
         
     }
     
-    private func touchIDSuccess() {
+    private func touchIDSuccess(sucess: Bool) {
         // Update UI!
         // do so on main queue
         OperationQueue.main.addOperation {
             print("Successfully validated fingerprint!!! YAY")
+            self.presentAuthAlert(isAuthed: sucess)
         }
         
+    }
+    
+    func presentAuthAlert(isAuthed: Bool) {
+        var msg = "This is not the correct fingerprint. Please contact the owner."
+        if isAuthed {
+            msg = "Thanks for checking in and letting your loved ones know that you're safe"
+        }
+        let alertController = UIAlertController(title: "Check In", message: msg, preferredStyle: .alert)
         
+        let OkAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(OkAction)
+        
+        self.navigationController?.visibleViewController?.present(alertController, animated: true, completion: nil)
     }
     
 }

@@ -90,7 +90,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("email: \(email)")
             
             // Create User with this info
-            let newUser = User(name: fullName!, googleServerAuthCode: serverAuthCode!, idToken: idToken!)
+            let newUser = User(name: fullName!, contacts: [], googleServerAuthCode: serverAuthCode!, idToken: idToken!)
             
             // Save locally
             User.encode(user: newUser)

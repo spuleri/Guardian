@@ -12,6 +12,8 @@ import Foundation
 // Good stuff: http://swiftandpainless.com/nscoding-and-swift-structs/
 struct User {
     let name: String
+    
+    var contacts: [Contact]
 
     // Should probably save this in keychain lol
     let googleServerAuthCode: String
@@ -23,6 +25,19 @@ struct User {
         let userClassObject = HelperClass(user: user)
         
         NSKeyedArchiver.archiveRootObject(userClassObject, toFile: HelperClass.path())
+    }
+    
+    mutating func addContact(contact: Contact) {
+        // Set rank as last
+        var contact = contact
+        let count = contacts.count
+        contact.rank = count
+        
+        // Add to array of contacts
+        contacts.append(contact)
+        
+        // Save
+        User.encode(user: self)
     }
     
     static func decode() -> User? {
@@ -71,9 +86,10 @@ extension User {
             guard let name = aDecoder.decodeObject(forKey: "name") as? String else { user = nil; super.init(); return nil }
             guard let googleServerAuthCode = aDecoder.decodeObject(forKey: "googleServerAuthCode") as? String else { user = nil; super.init(); return nil }
             guard let idToken = aDecoder.decodeObject(forKey: "idToken") as? String else { user = nil; super.init(); return nil }
+            guard let contacts = aDecoder.decodeObject(forKey: "contacts") as? [Contact] else { user = nil; super.init(); return nil }
             
             // We dont need to write a constructor for structs
-            user = User(name: name, googleServerAuthCode: googleServerAuthCode, idToken: idToken)
+            user = User(name: name, contacts: contacts, googleServerAuthCode: googleServerAuthCode, idToken: idToken)
 
             super.init()
         }
@@ -82,6 +98,7 @@ extension User {
             aCoder.encode(user?.name, forKey: "name")
             aCoder.encode(user?.googleServerAuthCode, forKey: "googleServerAuthCode")
             aCoder.encode(user?.idToken, forKey: "idToken")
+            aCoder.encode(user?.contacts, forKey: "contacts")
         }
     }
     

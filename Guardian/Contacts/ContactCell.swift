@@ -65,7 +65,7 @@ class ContactCell: UITableViewCell, CellData {
             contactImage.image = UIImage.init(named: contact.imageName)
             phoneNumber.text = contact.phone
             name.text = contact.name
-            rankLabel.text = String(contact.rank)
+            rankLabel.text = String(contact.rank+1)
             
             self.backgroundView = UIImageView.init(image: UIImage.init(named: "Contact Background"))
             self.selectedBackgroundView = UIImageView.init(image: UIImage.init(named: "Contact Background"))

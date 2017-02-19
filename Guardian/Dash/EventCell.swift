@@ -37,10 +37,27 @@ class EventCell: UITableViewCell, CellData {
     }
     
     func configure(event: Event) {
+        let date = event.timestamp
+        let calendar = Calendar.current
+        
+        
+        let month = Int(calendar.component(.month, from: date)).monthNumberToString()!
+        let day = calendar.component(.day, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        
+        let calculatedEventTime = timeFormatter.string(from: date)
+        let calculatedEventDate = ("\(month) \(day)")
+        
+        
         // TODO: Actually get data from event
-        eventTitle.text = "Marriott"
-        eventDate.text = "Feb 06"
-        eventTime.text = "6:30PM"
+        eventTitle.text = event.title
+        eventDate.text = String(calculatedEventDate)
+        eventTime.text = String(calculatedEventTime)
         
     }
     

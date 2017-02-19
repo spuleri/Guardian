@@ -91,10 +91,10 @@ class OnboardViewController: UIPageViewController {
         
         self.onBoardDelegate?.finishOnboard()
         
-        self.onBoardDelegate?.touchIdAuth() {
-            isAuthed in
-            print("yoo am i authed in the onboardVC?? \(isAuthed)")
-        }
+//        self.onBoardDelegate?.touchIdAuth() {
+//            isAuthed in
+//            print("yoo am i authed in the onboardVC?? \(isAuthed)")
+//        }
         
         
         

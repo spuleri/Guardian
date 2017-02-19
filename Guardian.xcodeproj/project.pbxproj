@@ -59,6 +59,11 @@
 		E1B1DB1D1E592DE8002BEF80 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB1C1E592DE8002BEF80 /* TableViewModel.swift */; };
 		E1B1DB1F1E592F27002BEF80 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB1E1E592F27002BEF80 /* Contact.swift */; };
 		E1B1DB221E59453E002BEF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB211E59453E002BEF80 /* Assets.xcassets */; };
+		E1B1DB2A1E596B16002BEF80 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB281E596B16002BEF80 /* SettingsViewController.swift */; };
+		E1B1DB2B1E596B16002BEF80 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB291E596B16002BEF80 /* SettingsViewController.xib */; };
+		E1B1DB321E59A59D002BEF80 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DB301E59A59C002BEF80 /* DataViewController.swift */; };
+		E1B1DB331E59A59D002BEF80 /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1B1DB311E59A59C002BEF80 /* DataViewController.xib */; };
+		E1F81DFC1E59B19E00D65929 /* MonthString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F81DFB1E59B19E00D65929 /* MonthString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,8 +136,13 @@
 		E1B1DB171E592D07002BEF80 /* ContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactCell.xib; path = Contacts/ContactCell.xib; sourceTree = "<group>"; };
 		E1B1DB1A1E592D8B002BEF80 /* ContactsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsViewModel.swift; path = Contacts/ContactsViewModel.swift; sourceTree = "<group>"; };
 		E1B1DB1C1E592DE8002BEF80 /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewModel.swift; path = Util/TableViewModel.swift; sourceTree = "<group>"; };
-		E1B1DB1E1E592F27002BEF80 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Contacts/Contact.swift; sourceTree = "<group>"; };
+		E1B1DB1E1E592F27002BEF80 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = Models/Contact.swift; sourceTree = "<group>"; };
 		E1B1DB211E59453E002BEF80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1B1DB281E596B16002BEF80 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
+		E1B1DB291E596B16002BEF80 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Settings/SettingsViewController.xib; sourceTree = "<group>"; };
+		E1B1DB301E59A59C002BEF80 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataViewController.swift; path = Util/DataViewController.swift; sourceTree = "<group>"; };
+		E1B1DB311E59A59C002BEF80 /* DataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DataViewController.xib; path = Util/DataViewController.xib; sourceTree = "<group>"; };
+		E1F81DFB1E59B19E00D65929 /* MonthString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthString.swift; path = Util/MonthString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +210,7 @@
 		E10310E91E5818F100E50751 /* Guardian */ = {
 			isa = PBXGroup;
 			children = (
+				E1B1DB231E596564002BEF80 /* Settings */,
 				E1B1DB201E592F52002BEF80 /* Util */,
 				E1B1DB111E59244E002BEF80 /* Contacts */,
 				E1B1DAF91E58FD91002BEF80 /* Resources */,
@@ -347,8 +358,20 @@
 				E1B1DAE91E58AA63002BEF80 /* UserStore.swift */,
 				E1B1DAF71E58F89C002BEF80 /* CellData.swift */,
 				E1B1DB1C1E592DE8002BEF80 /* TableViewModel.swift */,
+				E1B1DB301E59A59C002BEF80 /* DataViewController.swift */,
+				E1B1DB311E59A59C002BEF80 /* DataViewController.xib */,
+				E1F81DFB1E59B19E00D65929 /* MonthString.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		E1B1DB231E596564002BEF80 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1DB281E596B16002BEF80 /* SettingsViewController.swift */,
+				E1B1DB291E596B16002BEF80 /* SettingsViewController.xib */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,11 +478,13 @@
 				E103112C1E581FF300E50751 /* DashViewController.xib in Resources */,
 				E1B1DB0E1E58FD91002BEF80 /* OpenSans-Regular.ttf in Resources */,
 				E1B1DB0B1E58FD91002BEF80 /* OpenSans-Italic.ttf in Resources */,
+				E1B1DB2B1E596B16002BEF80 /* SettingsViewController.xib in Resources */,
 				E1B1DB0F1E58FD91002BEF80 /* OpenSans-Semibold.ttf in Resources */,
 				E1B1DB101E58FD91002BEF80 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				E1B1DB191E592D07002BEF80 /* ContactCell.xib in Resources */,
 				E1B1DB071E58FD91002BEF80 /* OpenSans-Bold.ttf in Resources */,
 				E1B1DB081E58FD91002BEF80 /* OpenSans-BoldItalic.ttf in Resources */,
+				E1B1DB331E59A59D002BEF80 /* DataViewController.xib in Resources */,
 				E10311131E58192800E50751 /* StepOneVC.xib in Resources */,
 				E1B1DB0D1E58FD91002BEF80 /* OpenSans-LightItalic.ttf in Resources */,
 				E1B1DB091E58FD91002BEF80 /* OpenSans-ExtraBold.ttf in Resources */,
@@ -578,12 +603,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E103113F1E589AF800E50751 /* User.swift in Sources */,
+				E1F81DFC1E59B19E00D65929 /* MonthString.swift in Sources */,
 				E10311161E581A9C00E50751 /* StepTwoVC.swift in Sources */,
 				E10311271E581E9800E50751 /* Coordinator.swift in Sources */,
 				E103112B1E581FF300E50751 /* DashViewController.swift in Sources */,
 				E1B1DB1F1E592F27002BEF80 /* Contact.swift in Sources */,
 				E1B1DB181E592D07002BEF80 /* ContactCell.swift in Sources */,
 				E1B1DAEE1E58E1A1002BEF80 /* Event.swift in Sources */,
+				E1B1DB321E59A59D002BEF80 /* DataViewController.swift in Sources */,
 				E1B1DAF31E58F358002BEF80 /* EventCell.swift in Sources */,
 				E10311221E581B1C00E50751 /* StepFiveVC.swift in Sources */,
 				E10311331E58329A00E50751 /* NetworkManager.swift in Sources */,
@@ -600,6 +627,7 @@
 				E1B1DB1B1E592D8B002BEF80 /* ContactsViewModel.swift in Sources */,
 				E103111E1E581AD200E50751 /* StepFourVC.swift in Sources */,
 				E103111A1E581ABB00E50751 /* StepThreeVC.swift in Sources */,
+				E1B1DB2A1E596B16002BEF80 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import UIKit
 protocol DashboardNavDelegate {
     func goToContacts()
     func goToSettings()
+    func touchIdAuth(isSuccess: @escaping (Bool) -> Void)
 }
 
 class DashViewController: UIViewController {
@@ -109,19 +110,9 @@ class DashViewController: UIViewController {
         let settingsButtonItem = UIBarButtonItem(image: settingsIcon, style: .plain, target: self, action: #selector(settingsButtonPressed))
         
         let titleImageButtonItem = UIBarButtonItem(image: guardianTextImage, style: .plain, target: self, action: nil)
-        titleImageButtonItem.isEnabled = false
-        titleImageButtonItem.tintColor = UIColor.white
-        titleImageButtonItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.white], for: UIControlState.disabled)
-        titleImageButtonItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.white], for: UIControlState.highlighted)
 
-        titleImageButtonItem.setBackgroundImage(guardianTextImage, for: .disabled, barMetrics: .default)
-        titleImageButtonItem.setBackgroundImage(guardianTextImage, for: .highlighted, barMetrics: .default)
-        
-        
         titleItem.setLeftBarButton(titleImageButtonItem, animated: false)
         titleItem.setRightBarButtonItems([settingsButtonItem, contactsButtonItem], animated: false)
-        
-    
         
         newNavBar.setItems([titleItem], animated: false)
         
@@ -129,7 +120,30 @@ class DashViewController: UIViewController {
     }
     
     @IBAction func checkinButtonPressed(_ sender: Any) {
+//        self.navDelegate.touchIdAuth(isSuccess: { (isAuthed) in
+//            print("i just authed on my own telling! \(isAuthed)")
+//            self.presentAuthAlert(isAuthed: isAuthed)
+//        })
+
+        self.navDelegate.touchIdAuth(isSuccess: {_ in })
         NetworkManager.sharedInstance.sampleGet()
+    }
+    
+    func presentAuthAlert(isAuthed: Bool) {
+        var msg = "This is not the correct fingerprint. Please contact the owner."
+        if isAuthed {
+            msg = "Thanks for checking in and letting your loved ones know that you're safe"
+        }
+        let alertController = UIAlertController(title: "Check In", message: msg, preferredStyle: .alert)
+        
+        let OkAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(OkAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 
     func contactsButtonPressed(_ sender: Any) {

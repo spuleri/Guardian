@@ -22,6 +22,10 @@ class UserStore {
         return self.currentUser
     }
     
+    func addContactToUser(contact: Contact) {
+        currentUser?.addContact(contact: contact)
+    }
+    
     func setCurrentUser(user: User) {
         self.currentUser = user
     

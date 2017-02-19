@@ -26,6 +26,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3e-gw-YWA">
                     <rect key="frame" x="89" y="584" width="197" height="63"/>
                     <state key="normal" image="Add Contact"/>
+                    <connections>
+                        <action selector="addContactButtonPressed:" destination="-1" eventType="touchUpInside" id="1Hu-ax-Pw8"/>
+                    </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f5P-fO-yb1">
                     <rect key="frame" x="34" y="84" width="307" height="468"/>

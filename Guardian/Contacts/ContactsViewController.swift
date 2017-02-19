@@ -47,6 +47,59 @@ class ContactsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addContactButtonPressed(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Add New Contact", message: "", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
+            alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+            let secondTextField = alertController.textFields![1] as UITextField
+            
+            let name = firstTextField.text
+            let number = secondTextField.text
+            
+            
+            
+            print("Name: \(name), Phone number \(number)")
+            
+            // Default to conor image
+            var imageName = "Conor"
+            
+            // If name was some one else whom we have an image of, use them though lol
+            if (name?.contains("Sergio"))! { imageName = "Sergio" }
+            if (name?.contains("Jacob"))! { imageName = "Jacob" }
+            if (name?.contains("Conor"))! { imageName = "Conor" }
+            if (name?.contains("Tatiana"))! { imageName = "Tatiana" }
+            if (name?.contains("Joseph"))! { imageName = "Joseph" }
+
+            
+            let newContact = Contact(name: name!, phone: number!, rank: 0, imageName: imageName, isEmergency: false)
+            
+            UserStore.instance.addContactToUser(contact: newContact)
+            
+            // Reload usssssss
+            self.viewModel.reloadData(tableView: self.tableView)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            
+        })
+        
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Name"
+        }
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Phone"
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     func styleNavBar() {
         // Hide old navbar
@@ -83,6 +136,8 @@ class ContactsViewController: UIViewController {
         print("Back button pressed")
         _ = self.navigationController?.popViewController(animated: true)
     }
+    
+    
 
 }
 
