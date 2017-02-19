@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -38,12 +39,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
         let coordinator = AppCoordinator(navigationController: navigationController)
+        // Set delegate for notifictions
+        let center = UNUserNotificationCenter.current()
+        center.delegate = coordinator
+        
+        // Start
         coordinator.start()
         window?.makeKeyAndVisible()
         
         
+        promptForNotifications()
         
         return true
+    }
+    
+    func promptForNotifications() {
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
     }
 
     func application(application: UIApplication,

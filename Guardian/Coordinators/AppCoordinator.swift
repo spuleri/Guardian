@@ -8,6 +8,7 @@
 
 import Foundation
 import LocalAuthentication
+import UserNotifications
 
 
 
@@ -145,3 +146,37 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
     }
     
 }
+
+
+extension AppCoordinator: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // Play sound and show alert to the user
+        completionHandler([.alert,.sound])
+        print("presented notification")
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        // Determine the user action
+        switch response.actionIdentifier {
+            case UNNotificationDismissActionIdentifier:
+                print("Dismiss Action")
+            case UNNotificationDefaultActionIdentifier:
+                print("Default - tapped notifiation and opened app!!")
+                self.authenticateUser(isSuccess: {_ in })
+            case "Snooze":
+                print("Snooze")
+            case "Delete":
+                print("Delete")
+            default:
+                print("Unknown action")
+        }
+        completionHandler()
+    }
+}
+

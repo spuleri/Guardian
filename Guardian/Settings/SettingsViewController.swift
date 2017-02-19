@@ -58,8 +58,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func secretButtonPressed(_ sender: Any) {
-        
+        let dataVC = DataViewController()
+        self.present(dataVC, animated: true, completion: nil)
     }
+    
+
 
     /*
     // MARK: - Navigation

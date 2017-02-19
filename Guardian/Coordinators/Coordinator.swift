@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Coordinator {
+class Coordinator: NSObject {
     
 //    var childCoordinators: [Coordinator] = []
     weak var navigationController: UINavigationController?

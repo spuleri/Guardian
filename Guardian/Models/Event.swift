@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UserNotifications
+
 
 class Event: NSObject, NSCoding {
     var title: String
@@ -17,6 +19,45 @@ class Event: NSObject, NSCoding {
     init(title: String, date: Date) {
         self.title = title
         self.timestamp = date
+    }
+    
+    static func seedEvents() -> [Event] {
+        
+        // Dummy data rn
+        
+        let now = Date()
+        let cal = NSCalendar(calendarIdentifier: .gregorian)
+        
+        let next10Days = cal?.date(byAdding: NSCalendar.Unit.day, value: 10, to: now, options: [])
+        let in30Minutes = cal?.date(byAdding: NSCalendar.Unit.minute, value: 30, to: now, options: [])
+        let in2Hours = cal?.date(byAdding: NSCalendar.Unit.hour, value: 2, to: now, options: [])
+        let in90Seconds = cal?.date(byAdding: NSCalendar.Unit.second, value: 90, to: now, options: [])
+        let in45Seconds = cal?.date(byAdding: NSCalendar.Unit.second, value: 45, to: now, options: [])
+        let in30Seconds = cal?.date(byAdding: NSCalendar.Unit.second, value: 30, to: now, options: [])
+        
+        
+        let event1 = Event(title:"Demo", date: in30Minutes!)
+        let event2 = Event(title:"Spring Break", date: next10Days!)
+        let event3 = Event(title:"Gainesville", date: in2Hours!)
+        let event4 = Event(title:"Here!", date: in90Seconds!)
+        let event5 = Event(title:"Down the hall!", date: in45Seconds!)
+        let event6 = Event(title:"Right here!", date: in30Seconds!)
+        
+        let events = [event1, event2, event3, event4, event5, event6]
+        
+        Event.encode(events: events)
+        
+        return events
+        
+    }
+    
+    static func deleteEvents() {
+        do {
+            try FileManager.default.removeItem(atPath: path())
+            print("Removal of Events Successful!!!!")
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
     }
     
     // MARK: NSCoding
@@ -46,6 +87,31 @@ class Event: NSObject, NSCoding {
     
     static func encode(events: [Event]) {
         NSKeyedArchiver.archiveRootObject(events, toFile: path())
+        
+
+        
+        for (index,event) in events.enumerated() {
+            // Make notifiations of this
+            let content = UNMutableNotificationContent()
+            content.title = event.title
+            content.body = "Verify that you're at this location"
+            content.sound = UNNotificationSound.default()
+            
+            let timeInterval = event.timestamp.timeIntervalSinceNow
+            print(timeInterval)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval,
+                                                            repeats: false)
+            let identifier = "EventNote-\(index)"
+            let request = UNNotificationRequest(identifier: identifier,
+                                                content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
+                if let error = error {
+                    // Something went wrong
+                    print("unable to add to note center")
+                }
+            })
+        }
+   
     }
     
     static func decode() -> [Event]? {

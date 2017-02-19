@@ -158,6 +158,9 @@ Apt 400, Gainesville FL</string>
                         <constraint firstAttribute="height" constant="15" id="cXQ-ro-HpQ"/>
                     </constraints>
                     <state key="normal" image="Info"/>
+                    <connections>
+                        <action selector="secretButtonPressed:" destination="-1" eventType="touchUpInside" id="qck-IB-xgV"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

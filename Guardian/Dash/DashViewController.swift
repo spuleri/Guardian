@@ -109,7 +109,7 @@ class DashViewController: UIViewController {
         
         let settingsButtonItem = UIBarButtonItem(image: settingsIcon, style: .plain, target: self, action: #selector(settingsButtonPressed))
         
-        let titleImageButtonItem = UIBarButtonItem(image: guardianTextImage, style: .plain, target: self, action: nil)
+        let titleImageButtonItem = UIBarButtonItem(image: guardianTextImage, style: .plain, target: self, action: #selector(refreshButtonPressed))
 
         titleItem.setLeftBarButton(titleImageButtonItem, animated: false)
         titleItem.setRightBarButtonItems([settingsButtonItem, contactsButtonItem], animated: false)
@@ -154,6 +154,12 @@ class DashViewController: UIViewController {
     func settingsButtonPressed(_ sender: Any) {
         print("pressed settings button, must present that view")
         navDelegate.goToSettings()
+    }
+    
+    func refreshButtonPressed(_ sender: Any) {
+        print("pressed Guardian refresh button")
+        self.viewModel.reloadData(tableView: self.tableView)
+        
     }
     
 
