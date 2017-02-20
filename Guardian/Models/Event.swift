@@ -36,11 +36,11 @@ class Event: NSObject, NSCoding {
         let in30Seconds = cal?.date(byAdding: NSCalendar.Unit.second, value: 30, to: now, options: [])
         
         
-        let event1 = Event(title:"Demo", date: in30Minutes!)
+        let event1 = Event(title:"Down the hall", date: in30Minutes!)
         let event2 = Event(title:"Spring Break", date: next10Days!)
         let event3 = Event(title:"Gainesville", date: in2Hours!)
         let event4 = Event(title:"Dirac", date: in90Seconds!)
-        let event5 = Event(title:"Down the hall!", date: in45Seconds!)
+        let event5 = Event(title:"Demo!", date: in45Seconds!)
         let event6 = Event(title:"FSU Campus", date: in30Seconds!)
         
         let events = [event1, event2, event3, event4, event5, event6]
@@ -90,7 +90,7 @@ class Event: NSObject, NSCoding {
         
 
         
-        for (index,event) in events.enumerated() {
+        for (_ ,event) in events.enumerated() {
             // Make notifiations of this
             let content = UNMutableNotificationContent()
             content.title = event.title
@@ -107,7 +107,7 @@ class Event: NSObject, NSCoding {
             UNUserNotificationCenter.current().add(request, withCompletionHandler: { (error) in
                 if let error = error {
                     // Something went wrong
-                    print("unable to add to note center")
+                    print("unable to add to note center\n print \(error)")
                 }
             })
         }

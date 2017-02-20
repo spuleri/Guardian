@@ -10,6 +10,7 @@ import Foundation
 
 protocol DashboardTableViewModel: TableViewModel {
     func removeEventByTitle(title: String) -> Bool
+    var tapEventclosure: ((Event) -> ())? {get set}
 }
 
 class DashboardViewModel: DashboardTableViewModel {
@@ -20,6 +21,8 @@ class DashboardViewModel: DashboardTableViewModel {
         return events.count
     }
     
+    var tapEventclosure: ((Event) -> ())?
+    
     
     func cellAtIndex(tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
@@ -28,7 +31,7 @@ class DashboardViewModel: DashboardTableViewModel {
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         // Configure for this event
-        cell.configure(event: events[indexPath.section])
+        cell.configure(event: events[indexPath.section], tapClosure: tapEventclosure)
         
         // Set the background image to white box with shadow image
         cell.backgroundView = UIImageView.init(image: UIImage.init(named: "Destination Background"))

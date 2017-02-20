@@ -22,7 +22,7 @@ class DataViewController: UIViewController {
     }
     
     @IBAction func seedEventsButtonPressed(_ sender: Any) {
-        Event.seedEvents()
+        _ = Event.seedEvents()
     }
 
     @IBAction func deleteEventsButtonPressed(_ sender: Any) {

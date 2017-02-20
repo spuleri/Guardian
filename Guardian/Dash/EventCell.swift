@@ -9,8 +9,12 @@
 import UIKit
 
 class EventCell: UITableViewCell, CellData {
-
     
+    // Data
+    var optionButtonHandler: ((Event) -> Void)?
+    var event: Event?
+    
+    // Outlets
     @IBOutlet weak var optionsButton: UIButton!
     @IBOutlet weak var circleImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
@@ -36,16 +40,21 @@ class EventCell: UITableViewCell, CellData {
         // Configure the view for the selected state
     }
     
-    func configure(event: Event) {
+    func configure(event: Event, tapClosure: ((Event)->())?) {
+
+        // Set appropiate data
+        self.event = event
+        self.optionButtonHandler = tapClosure
+        
         let date = event.timestamp
         let calendar = Calendar.current
         
         
         let month = Int(calendar.component(.month, from: date)).monthNumberToString()!
         let day = calendar.component(.day, from: date)
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        let seconds = calendar.component(.second, from: date)
+//        let hour = calendar.component(.hour, from: date)
+//        let minutes = calendar.component(.minute, from: date)
+//        let seconds = calendar.component(.second, from: date)
         
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "h:mm a"
@@ -53,8 +62,6 @@ class EventCell: UITableViewCell, CellData {
         let calculatedEventTime = timeFormatter.string(from: date)
         let calculatedEventDate = ("\(month) \(day)")
         
-        
-        // TODO: Actually get data from event
         eventTitle.text = event.title
         eventDate.text = String(calculatedEventDate)
         eventTime.text = String(calculatedEventTime)
@@ -63,5 +70,9 @@ class EventCell: UITableViewCell, CellData {
     
     @IBAction func optionsButtonPressed(_ sender: Any) {
         print("options button pressed")
+        if let callback = self.optionButtonHandler,
+            let theEvent = self.event {
+            callback(theEvent)
+        }
     }
 }

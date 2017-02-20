@@ -237,8 +237,9 @@ extension ContactsViewController: DragCellDelegate {
                     self.tableView.moveSection(ContactsViewController.sourceIndexPath!.section, toSection: path.section)
                     
                     // Reload data so appropate data swap happens!! >:D
-                    let sectionIndex1 = IndexSet(integer: ContactsViewController.sourceIndexPath!.section)
-                    let sectionIndex2 = IndexSet(integer: path.section)
+                    // TODO: Make this actually work
+//                    let sectionIndex1 = IndexSet(integer: ContactsViewController.sourceIndexPath!.section)
+//                    let sectionIndex2 = IndexSet(integer: path.section)
                     
 //                    self.tableView.reloadSections(sectionIndex1, with: .none) // or fade, right, left, top, bottom, none, middle, automatic
 //                    self.tableView.reloadSections(sectionIndex2, with: .none) // or fade, right, left, top, bottom, none, middle, automatic

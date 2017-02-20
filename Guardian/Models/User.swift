@@ -29,7 +29,7 @@ struct User {
     
     mutating func addContact(contact: Contact) {
         // Set rank as last
-        var contact = contact
+        let contact = contact
         let count = contacts.count
         contact.rank = count
         

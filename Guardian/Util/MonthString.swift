@@ -40,11 +40,8 @@ extension Int {
             case 12:
                 return "Dec"
             default:
-                break
                 return nil
             }
         }
-        
-        return nil
     }
 }

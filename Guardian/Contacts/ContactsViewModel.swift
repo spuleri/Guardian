@@ -76,9 +76,9 @@ class ContactsViewModel: ContactsTableViewModel {
     
     func exchangeObjectAtIndex(index: Int, withObjectAtIndex otherIndex: Int) {
         // TODO: must persist the change to DB too since we are updating rank
-        var contact1 = contacts[index]
+        let contact1 = contacts[index]
         
-        var contact2 = contacts[otherIndex]
+        let contact2 = contacts[otherIndex]
         
         let rank1 = contact1.rank
         

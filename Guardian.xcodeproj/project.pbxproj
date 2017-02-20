@@ -31,6 +31,7 @@
 		E10311351E58416300E50751 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E10311341E58416300E50751 /* GoogleService-Info.plist */; };
 		E103113C1E5894DC00E50751 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103113B1E5894DC00E50751 /* LocationManager.swift */; };
 		E103113F1E589AF800E50751 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E103113E1E589AF800E50751 /* User.swift */; };
+		E12E300C1E5BA11A00D3F556 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12E300B1E5BA11A00D3F556 /* SimpleAlert.swift */; };
 		E1B1DAEA1E58AA63002BEF80 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAE91E58AA63002BEF80 /* UserStore.swift */; };
 		E1B1DAEC1E58D330002BEF80 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1B1DAEB1E58D330002BEF80 /* LocalAuthentication.framework */; };
 		E1B1DAEE1E58E1A1002BEF80 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1DAED1E58E1A1002BEF80 /* Event.swift */; };
@@ -108,6 +109,7 @@
 		E10311361E58706B00E50751 /* Guardian-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Guardian-Bridging-Header.h"; sourceTree = "<group>"; };
 		E103113B1E5894DC00E50751 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Location/LocationManager.swift; sourceTree = "<group>"; };
 		E103113E1E589AF800E50751 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		E12E300B1E5BA11A00D3F556 /* SimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimpleAlert.swift; path = Util/SimpleAlert.swift; sourceTree = "<group>"; };
 		E1B1DAE91E58AA63002BEF80 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Util/UserStore.swift; sourceTree = "<group>"; };
 		E1B1DAEB1E58D330002BEF80 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		E1B1DAED1E58E1A1002BEF80 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				E1B1DB301E59A59C002BEF80 /* DataViewController.swift */,
 				E1B1DB311E59A59C002BEF80 /* DataViewController.xib */,
 				E1F81DFB1E59B19E00D65929 /* MonthString.swift */,
+				E12E300B1E5BA11A00D3F556 /* SimpleAlert.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 			files = (
 				E103113F1E589AF800E50751 /* User.swift in Sources */,
 				E1F81DFC1E59B19E00D65929 /* MonthString.swift in Sources */,
+				E12E300C1E5BA11A00D3F556 /* SimpleAlert.swift in Sources */,
 				E10311161E581A9C00E50751 /* StepTwoVC.swift in Sources */,
 				E10311271E581E9800E50751 /* Coordinator.swift in Sources */,
 				E103112B1E581FF300E50751 /* DashViewController.swift in Sources */,

@@ -26,9 +26,10 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
         
         if doOnboard {
             self.doOnboard()
-        } else {
-            self.doDash()
         }
+//        } else {
+//            self.doDash()
+//        }
     }
     
     // MARK: Navigation
@@ -95,7 +96,7 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
         
         // Setup data
         var error: NSError?
-        var localizedReasonStringThatIsntReallyLocalized = "Verify your safety via your fingerprint please"
+        let localizedReasonStringThatIsntReallyLocalized = "Verify your safety via your fingerprint please"
         
         if context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &error) {
             
@@ -132,7 +133,7 @@ final class AppCoordinator: Coordinator, OnboardFinisherDelegate, DashboardNavDe
             
             if let noteTitle = noteToRemove {
                 // Remove from the data source
-                self.dashViewModel?.removeEventByTitle(title: noteTitle)
+                _ = self.dashViewModel?.removeEventByTitle(title: noteTitle)
             }
         }
         
